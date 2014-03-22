@@ -1,0 +1,125 @@
+@import url('../fontawesome/fonts.css');
+
+/* Dashboard Widget */
+
+#quickstartbuttons-widget {
+    width: 100%;
+    overflow: hidden;   
+}
+#quickstartbuttons-widget p {
+    margin-bottom: 12px;
+}
+#quickstartbuttons-widget ul:before,
+#quickstartbuttons-widget ul:after {
+    content: " ";
+    display: table;
+}
+#quickstartbuttons-widget ul:after {
+    clear: both;
+}
+#quickstartbuttons-widget ul {
+    width: 102%;
+    margin: -1% 0 0 -1%;
+    /* clearfix */
+    *zoom: 1;
+}
+#quickstartbuttons-widget ul li {
+    display: table;
+    position: relative;
+    width: 32%;
+    margin: 0;
+    padding: 1% 0 0 1%;
+    float: left;
+}
+
+#quickstartbuttons-widget ul.one-item-per-row { margin: 0; }
+#quickstartbuttons-widget ul.one-item-per-row li { width: 97%; float: none; }
+#quickstartbuttons-widget ul.two-items-per-row li { width: 48%; }
+#quickstartbuttons-widget ul.three-items-per-row li { width: 32%; }
+#quickstartbuttons-widget ul.four-items-per-row li { width: 23%; }
+#quickstartbuttons-widget ul.five-items-per-row li { width: 18.5%; }
+
+#quickstartbuttons-widget ul li a {
+    display: table-cell;
+    height: 65px;
+    width: 100%;
+    position: relative;
+    padding: 0px 15px 0px 52px;
+    text-decoration: none;
+    vertical-align: middle;
+    /* MODX 2.x.x Manager Button Styles */
+    font: bold 11px tahoma, verdana, helvetica, sans-serif;
+    color: #53595f;
+    background: url(../images/modx-theme/form/button-bg.svg) repeat-x scroll 0 bottom rgba(222,222,222,1);
+    background:-moz-linear-gradient(center bottom,#dedede 0%,#ffffff 100%) repeat scroll 0 0 transparent;
+    background:-webkit-gradient(linear,left top,left bottom,color-stop(0%,#ffffff),color-stop(100%,#dedede));
+    background:-webkit-linear-gradient(center bottom,#dedede 0%,#ffffff 100%);
+    background:-o-linear-gradient(center bottom,#dedede 0%,#ffffff 100%);
+    background:-ms-linear-gradient(center bottom,#dedede 0%,#ffffff 100%); 
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#ffffff,endColorstr=#dedede,GradientType=0);
+    background:linear-gradient(center bottom,#dedede 0%,#ffffff 100%);
+    -moz-border-radius:3px;
+    -webkit-border-radius:3px;
+    -khtml-border-radius:3px;
+    border-radius:3px;
+    border: 1px solid gray;
+    border-color: #CACACA #C0C0C0 #AAA;
+    -moz-box-shadow:rgba(0,0,0,0.2) 0 0 1px;
+    -webkit-box-shadow:rgba(0,0,0,0.2) 0 0 1px;
+    -o-box-shadow:rgba(0,0,0,0.2) 0 0 1px;
+    box-shadow:rgba(0,0,0,0.2) 0 0 1px;
+}
+#quickstartbuttons-widget ul li a:hover {
+    background:-moz-linear-gradient(center bottom,#cecece 0%,#ffffff 100%) repeat scroll 0 0 transparent;
+    background:-webkit-gradient(linear,left top,left bottom,color-stop(0%,#ffffff),color-stop(100%,#cecece));
+    background:-webkit-linear-gradient(center bottom,#cecece 0%,#ffffff 100%);
+    background:-o-linear-gradient(center bottom,#cecece 0%,#ffffff 100%);
+    background:-ms-linear-gradient(center bottom,#cecece 0%,#ffffff 100%); 
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#ffffff,endColorstr=#cecece,GradientType=0);
+    background:linear-gradient(center bottom,#cecece 0%,#ffffff 100%);
+}
+#quickstartbuttons-widget ul li a span {
+    display: block;
+    line-height: 1.4;
+}
+#quickstartbuttons-widget ul li a span.headline {
+    font-size: 12px;
+}
+#quickstartbuttons-widget ul li a span em {
+    font-weight: normal;
+    font-style: normal;
+}
+#quickstartbuttons-widget ul li a .icon {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 52px;
+    height: 100%;
+    text-align: center;
+    line-height: 65px;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+#quickstartbuttons-widget ul li a .icon {
+
+}
+
+/* Manager window */
+
+i.fa.fa-larger { font-size: 1.2em; }
+i.icon {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-size: 86%;
+    background-repeat: no-repeat;
+    background-position: left center;
+}
+
+/* Vertical window tabs */
+.window-vtabs .x-panel-ml { padding: 0 !important; }
+.window-vtabs .x-panel-mc { padding: 0 !important; }
+.window-vtabs .vertical-tabs-panel { width: 100% !important; }
+.window-vtabs .x-panel-mc .x-panel-tbar .x-toolbar { background-color: transparent; }

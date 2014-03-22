@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model package="quickstartbuttons" baseClass="xPDOObject" platform="mysql" defaultEngine="MyISAM" version="1.0">
+	
+	<object class="qsbSetUserGroup" table="quickstartbuttons_sets_usergroups" extends="xPDOObject">
+        <field key="usergroup" dbtype="int" precision="11" phptype="integer" null="false" default="0" index="pk" />
+        <field key="set" dbtype="int" precision="11" phptype="integer" null="false" default="0" index="pk" />
+
+        <index alias="PRIMARY" name="PRIMARY" primary="true" unique="true" type="BTREE">
+            <column key="usergroup" length="" collation="A" null="false" />
+            <column key="set" length="" collation="A" null="false" />
+        </index>
+
+        <aggregate alias="UserGroup" class="modUserGroup" local="usergroup" foreign="id" cardinality="one" owner="foreign" />
+        <aggregate alias="Set" class="qsbSet" local="set" foreign="id" cardinality="one" owner="foreign" />
+    </object>
+
+    <object class="qsbSet" table="quickstartbuttons_sets" extends="xPDOSimpleObject">
+		<field key="name" dbtype="varchar" precision="255" phptype="string" null="false" index="index" />
+        <field key="description" dbtype="text" phptype="string" null="false" default="" />
+        <field key="size" dbtype="varchar" precision="25" phptype="string" null="false" default="full" />
+        <field key="perrow" dbtype="varchar" precision="25" phptype="string" null="false" default="four" />
+        <field key="active" dbtype="tinyint" precision="1" phptype="boolean" default="1" index="index" />
+
+        <composite alias="UserGroup" class="qsbSetUserGroup" local="id" foreign="set" cardinality="many" owner="local" />
+        <composite alias="Button" class="qsbButton" local="id" foreign="set" cardinality="many" owner="local" />
+	</object>
+
+    <object class="qsbButton" table="quickstartbuttons_buttons" extends="xPDOSimpleObject">
+        <field key="set" dbtype="int" precision="11" phptype="integer" null="false" default="0" index="index" />
+        <field key="icon" dbtype="int" precision="11" phptype="integer" null="false" default="" index="index" />
+        <field key="text" dbtype="varchar" precision="255" phptype="string" null="false" index="index" />
+        <field key="description" dbtype="text" phptype="string" null="false" default="" />
+
+        <field key="action_id" dbtype="int" precision="11" phptype="integer" null="true" default="NULL" />
+        <field key="handler" dbtype="varchar" precision="255" phptype="string" null="true" default="NULL" />
+        <field key="link" dbtype="varchar" precision="255" phptype="string" null="true" default="NULL" />
+        <field key="newwindow" dbtype="tinyint" precision="1" phptype="boolean" null="false" default="0" />
+
+        <field key="ranking" dbtype="int" precision="11" phptype="integer" default="1" index="index" />
+        <field key="active" dbtype="tinyint" precision="1" phptype="boolean" default="1" index="index" />
+
+        <aggregate alias="Set" class="qsbSet" local="profile" foreign="id" cardinality="one" owner="foreign" />
+        <aggregate alias="Icon" class="qsbIcon" local="icon" foreign="id" cardinality="one" owner="foreign" />
+        <aggregate alias="Action" class="modAction" local="action_id" foreign="id" cardinality="one" owner="foreign" />
+    </object>
+
+    <object class="qsbIcon" table="quickstartbuttons_icons" extends="xPDOSimpleObject">
+        <field key="name" dbtype="varchar" precision="50" phptype="string" null="false" default="" index="index" />
+        <field key="class" dbtype="varchar" precision="50" phptype="string" null="false" default="" index="unique" />
+        <field key="path" dbtype="varchar" precision="255" phptype="string" null="true" default="NULL" />
+        <field key="preset" dbtype="tinyint" precision="1" phptype="boolean" default="0" index="index" />
+
+        <aggregate alias="Button" class="qsbButton" local="id" foreign="icon" cardinality="many" owner="foreign" />
+    </object>
+
+</model>
