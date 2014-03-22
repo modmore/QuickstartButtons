@@ -1,6 +1,6 @@
 <?php
 
-define('PKG_NAME', 'Redirector');
+define('PKG_NAME', 'QuickstartButtons');
 define('PKG_NAME_LOWER', strtolower(PKG_NAME));
 
 require_once dirname(__FILE__).'/build.config.php';
@@ -19,11 +19,11 @@ $sources = array(
     'resolvers' => $root . '_build/resolvers/',
     'data' => $root . '_build/data/',
 
-    'model' => $root.'core/components/quickstartbuttons/model/',
-    'schema' => $root.'core/components/quickstartbuttons/model/schema/',
-    'schema_file' => $root.'core/components/quickstartbuttons/model/schema/quickstartbuttons.mysql.schema.xml',
-    'source_core' => $root.'core/components/quickstartbuttons/',
-    'source_assets' => $root.'assets/components/quickstartbuttons/',
+    'model' => $root.'core/components/'.PKG_NAME_LOWER.'/model/',
+    'schema' => $root.'core/components/'.PKG_NAME_LOWER.'/model/schema/',
+    'schema_file' => $root.'core/components/'.PKG_NAME_LOWER.'/model/schema/'.PKG_NAME_LOWER.'.mysql.schema.xml',
+    'source_core' => $root.'core/components/'.PKG_NAME_LOWER.'/',
+    'source_assets' => $root.'assets/components/'.PKG_NAME_LOWER.'/',
 );
 
 $manager= $modx->getManager();
@@ -41,7 +41,7 @@ if(!file_exists($sources['schema_file'])) {
 
 $generator->parseSchema($sources['schema_file'], $sources['model']);
 
-$modx->addPackage('quickstartbuttons', $sources['model']);
+$modx->addPackage(PKG_NAME_LOWER, $sources['model']);
 $manager->createObjectContainer('qsbSet');
 $manager->createObjectContainer('qsbSetUserGroup');
 $manager->createObjectContainer('qsbButton');
