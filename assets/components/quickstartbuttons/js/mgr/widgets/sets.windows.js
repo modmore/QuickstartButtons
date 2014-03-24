@@ -23,7 +23,6 @@ QuickstartButtons.window.CreateSet = function(config) {
 			,fieldLabel: _('quickstartbuttons.sets.description')
 			,name: 'description'
 			,anchor: '100%'
-			,allowBlank: false
 		},{
             layout: 'column'
             ,border: false
