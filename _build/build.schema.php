@@ -50,22 +50,3 @@ $manager->createObjectContainer('qsbIcon');
 //$manager->alterField('qsbButton', 'iconcls');
 //$manager->removeField('qsbButton', 'link_target');
 //$manager->addField('qsbButton', 'newwindow', array('after' => 'link'));
-
-// icons
-$truncate = $modx->query("TRUNCATE TABLE  {$modx->getTableName('qsbIcon')}");
-$truncate->execute();
-
-$icons = include($sources['resolvers'].'icons.resolve.php');
-foreach($icons as $icon) {
-    $icon->save();
-}
-
-// sets and buttons
-$truncate = $modx->query("TRUNCATE TABLE  {$modx->getTableName('qsbSet')}");
-$truncate->execute();
-$truncate = $modx->query("TRUNCATE TABLE  {$modx->getTableName('qsbSetUserGroup')}");
-$truncate->execute();
-$truncate = $modx->query("TRUNCATE TABLE  {$modx->getTableName('qsbButton')}");
-$truncate->execute();
-
-include($sources['resolvers'].'records.resolve.php');

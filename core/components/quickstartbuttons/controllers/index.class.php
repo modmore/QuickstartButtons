@@ -26,7 +26,7 @@ abstract class QuickstartButtonsManagerController extends modExtraManagerControl
         return array('dashboards','quickstartbuttons:default');
     }
 
-    public function checkPermissions() { return true;}
+    public function checkPermissions() { return $this->modx->hasPermission('dashboards'); }
 }
 
 class ControllersIndexManagerController extends QuickstartButtonsManagerController {
