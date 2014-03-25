@@ -47,8 +47,6 @@ $sources = array(
 );
 unset($root);
 
-$modx->addPackage('quickstartbuttons', $sources['source_core'].'model/'.PKG_NAME_LOWER.'/');
-
 /** @var modPackageBuilder $builder **/
 $builder = new modPackageBuilder($modx);
 $builder->directory = $targetDirectory;
@@ -127,4 +125,4 @@ $totalTime = sprintf("%2.4f s", ($tend - $tstart));
 
 $modx->log(modX::LOG_LEVEL_INFO, "Package Built. Execution time: {$totalTime}\n");
 $modx->log(modX::LOG_LEVEL_INFO, "\n-----------------------------\n".PKG_NAME." ".PKG_VERSION."-".PKG_RELEASE." built\n-----------------------------");
-exit();
+flush();
