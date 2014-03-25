@@ -47,9 +47,7 @@ $sources = array(
 );
 unset($root);
 
-/** @var QuickstartButtons $quickstartbuttons **/
-require_once $sources['source_core'].'model/'.PKG_NAME_LOWER.'/'.PKG_NAME_LOWER.'.class.php';
-$quickstartbuttons = new QuickstartButtons($modx);
+$modx->addPackage('quickstartbuttons', $sources['source_core'].'model/'.PKG_NAME_LOWER.'/');
 
 /** @var modPackageBuilder $builder **/
 $builder = new modPackageBuilder($modx);
