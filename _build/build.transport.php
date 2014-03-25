@@ -4,11 +4,29 @@ $tstart = explode(' ', microtime());
 $tstart = $tstart[1] + $tstart[0];
 set_time_limit(0);
 
-/* define package names */
-define('PKG_NAME', 'QuickstartButtons');
-define('PKG_NAME_LOWER', strtolower(PKG_NAME));
-define('PKG_VERSION', '1.0.0');
-define('PKG_RELEASE', 'pl');
+if (!defined('MOREPROVIDER_BUILD')) {
+    /* define version */
+    define('PKG_NAME','QuickstartButtons');
+    define('PKG_NAME_LOWER',strtolower(PKG_NAME));
+    define('PKG_VERSION','1.0.0');
+    define('PKG_RELEASE','pl');
+
+    /* load modx */
+    require_once dirname(dirname(__FILE__)) . '/config.core.php';
+    require_once MODX_CORE_PATH . 'model/modx/modx.class.php';
+    $modx= new modX();
+    $modx->initialize('mgr');
+    $modx->setLogLevel(modX::LOG_LEVEL_INFO);
+    $modx->setLogTarget('ECHO');
+
+
+    echo '<pre>';
+    flush();
+    $targetDirectory = dirname(dirname(__FILE__)) . '/_packages/';
+}
+else {
+    $targetDirectory = MOREPROVIDER_BUILD_TARGET;
+}
 
 /* define build paths */
 $root = dirname(dirname(__FILE__)).'/';
@@ -29,22 +47,13 @@ $sources = array(
 );
 unset($root);
 
-/* override with your own defines here (see build.config.sample.php) */
-require_once dirname(dirname(__FILE__)) . '/config.core.php';
-require_once MODX_CORE_PATH . 'model/modx/modx.class.php';
-
-$modx = new modX();
-$modx->initialize('mgr');
-$modx->setLogLevel(modX::LOG_LEVEL_INFO);
-$modx->setLogTarget(XPDO_CLI_MODE ? 'ECHO' : 'HTML');
-$modx->loadClass('transport.modPackageBuilder', '', false, true);
-
 /** @var QuickstartButtons $quickstartbuttons **/
 require_once $sources['source_core'].'model/'.PKG_NAME_LOWER.'/'.PKG_NAME_LOWER.'.class.php';
 $quickstartbuttons = new QuickstartButtons($modx);
 
 /** @var modPackageBuilder $builder **/
 $builder = new modPackageBuilder($modx);
+$builder->directory = $targetDirectory;
 $builder->createPackage(PKG_NAME_LOWER,PKG_VERSION,PKG_RELEASE);
 $builder->registerNamespace(PKG_NAME_LOWER, false, true, '{core_path}components/'.PKG_NAME_LOWER.'/');
 
