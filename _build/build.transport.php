@@ -30,7 +30,7 @@ $sources = array(
 unset($root);
 
 /* override with your own defines here (see build.config.sample.php) */
-require_once dirname(__FILE__) . '/build.config.php';
+require_once dirname(dirname(__FILE__)) . '/config.core.php';
 require_once MODX_CORE_PATH . 'model/modx/modx.class.php';
 
 $modx = new modX();
