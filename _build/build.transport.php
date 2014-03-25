@@ -27,7 +27,6 @@ if (!defined('MOREPROVIDER_BUILD')) {
 else {
     $targetDirectory = MOREPROVIDER_BUILD_TARGET;
 }
-
 /* define build paths */
 $root = dirname(dirname(__FILE__)).'/';
 $sources = array(
@@ -47,6 +46,7 @@ $sources = array(
 );
 unset($root);
 
+$modx->loadClass('transport.modPackageBuilder','',false, true);
 /** @var modPackageBuilder $builder **/
 $builder = new modPackageBuilder($modx);
 $builder->directory = $targetDirectory;
