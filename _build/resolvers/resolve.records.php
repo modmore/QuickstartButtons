@@ -5,8 +5,6 @@ $modx =& $object->xpdo;
 
 switch($options[xPDOTransport::PACKAGE_ACTION]) {
 	case xPDOTransport::ACTION_INSTALL:
-	case xPDOTransport::ACTION_UPGRADE:
-
         $modx->log(modX::LOG_LEVEL_INFO, 'Install default records...');
         $modelPath = $modx->getOption('quickstartbuttons.core_path', null, $modx->getOption('core_path').'components/quickstartbuttons/').'model/';
 		$modx->addPackage('quickstartbuttons', $modelPath);

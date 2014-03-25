@@ -7,7 +7,6 @@ if (!isset($modx)) {
 
 switch($options[xPDOTransport::PACKAGE_ACTION]) {
 	case xPDOTransport::ACTION_INSTALL:
-	case xPDOTransport::ACTION_UPGRADE:
 
         $modelPath = $modx->getOption('quickstartbuttons.core_path', null, $modx->getOption('core_path').'components/quickstartbuttons/').'model/';
 		$modx->addPackage('quickstartbuttons', $modelPath);
