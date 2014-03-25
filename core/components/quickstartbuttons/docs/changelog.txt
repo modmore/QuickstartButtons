@@ -1,4 +1,6 @@
+- Fix installing defaults on upgrade
+
 ++ QuickstartButtons 1.0.0-pl
 ++ Released on 2014-03-24
 +++++++++++++++++++++++++
-- Initial component
+- Initial release
