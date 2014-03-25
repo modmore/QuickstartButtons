@@ -25,7 +25,7 @@ switch($options[xPDOTransport::PACKAGE_ACTION]) {
                 'set' => $set->get('id'),
                 'text' => 'Open the Quickstart Buttons documentation',
                 'description' => 'Click here to review the documentation of modmores\' Quickstart Buttons',
-                'link' => 'http://www.modmore.com/extras/quickstartbuttons/docs/',
+                'link' => 'http://www.modmore.com/extras/quickstartbuttons/documentation/',
                 'newwindow' => true,
                 'ranking' => 1,
             ));
