@@ -1,6 +1,9 @@
 <?php
 
-$modx =& $object->xpdo;
+// Used for bootstrapping
+if (!isset($modx)) {
+    $modx =& $object->xpdo;
+}
 
 switch($options[xPDOTransport::PACKAGE_ACTION]) {
 	case xPDOTransport::ACTION_INSTALL:
