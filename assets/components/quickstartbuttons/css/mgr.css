@@ -42,7 +42,7 @@
     display: block;
     float: left;
     position: relative;
-    width: 33%;
+    width: 33.333%;
     margin: 0;
     padding: 5px;
     box-sizing: border-box;
@@ -54,7 +54,7 @@
 #quickstartbuttons-widget ul.one-item-per-row { margin: 0; }
 #quickstartbuttons-widget ul.one-item-per-row li { width: 100%; }
 #quickstartbuttons-widget ul.two-items-per-row li { width: 50%; }
-#quickstartbuttons-widget ul.three-items-per-row li { width: 33%; }
+#quickstartbuttons-widget ul.three-items-per-row li { width: 33.333%; }
 #quickstartbuttons-widget ul.four-items-per-row li { width: 25%; }
 #quickstartbuttons-widget ul.five-items-per-row li { width: 20%; }
 
