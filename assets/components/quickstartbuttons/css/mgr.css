@@ -3,51 +3,75 @@
 /* Dashboard Widget */
 
 #quickstartbuttons-widget {
-    width: 100%;
-    overflow: hidden;   
+    width: auto;
+    overflow: hidden;
+    margin: -10px;
 }
-#quickstartbuttons-widget p {
-    margin-bottom: 12px;
+#quickstartbuttons-widget > p {
+	margin: 10px 0px 0px;
+	background-color: #F7F7F7;
+	border-bottom: 1px solid #E7E7E7;
+	border-top: 1px solid #E7E7E7;
+	color: #5A5A5A;
+	line-height: 1.5;
+	padding: 15px;
+	font-size: 13px;
 }
-#quickstartbuttons-widget ul:before,
-#quickstartbuttons-widget ul:after {
-    content: " ";
-    display: table;
-}
-#quickstartbuttons-widget ul:after {
-    clear: both;
-}
+
 #quickstartbuttons-widget ul {
-    width: 102%;
-    margin: -1% 0 0 -1%;
-    /* clearfix */
-    *zoom: 1;
-}
-#quickstartbuttons-widget ul li {
-    display: table;
-    position: relative;
-    width: 32%;
+	display: block;
+    width: 100%;
     margin: 0;
-    padding: 1% 0 0 1%;
+    padding: 5px;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+}
+
+#quickstartbuttons-widget ul:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+}
+
+#quickstartbuttons-widget ul li {
+    display: block;
     float: left;
+    position: relative;
+    width: 33.333%;
+    margin: 0;
+    padding: 5px;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
 }
 
 #quickstartbuttons-widget ul.one-item-per-row { margin: 0; }
-#quickstartbuttons-widget ul.one-item-per-row li { width: 97%; float: none; }
-#quickstartbuttons-widget ul.two-items-per-row li { width: 48%; }
-#quickstartbuttons-widget ul.three-items-per-row li { width: 32%; }
-#quickstartbuttons-widget ul.four-items-per-row li { width: 23%; }
-#quickstartbuttons-widget ul.five-items-per-row li { width: 18.5%; }
+#quickstartbuttons-widget ul.one-item-per-row li { width: 100%; }
+#quickstartbuttons-widget ul.two-items-per-row li { width: 50%; }
+#quickstartbuttons-widget ul.three-items-per-row li { width: 33.333%; }
+#quickstartbuttons-widget ul.four-items-per-row li { width: 25%; }
+#quickstartbuttons-widget ul.five-items-per-row li { width: 20%; }
 
 #quickstartbuttons-widget ul li a {
-    display: table-cell;
+    display: block;
     height: 65px;
     width: 100%;
     position: relative;
     padding: 0px 15px 0px 52px;
     text-decoration: none;
-    vertical-align: middle;
-    /* MODX 2.x.x Manager Button Styles */
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-webkit-font-smoothing: antialiased;
+	
+    /* MODX 2.2.x Manager Button Styles */
     font: bold 11px tahoma, verdana, helvetica, sans-serif;
     color: #53595f;
     background: url(../images/modx-theme/form/button-bg.svg) repeat-x scroll 0 bottom rgba(222,222,222,1);
@@ -78,21 +102,28 @@
     filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#ffffff,endColorstr=#cecece,GradientType=0);
     background:linear-gradient(center bottom,#cecece 0%,#ffffff 100%);
 }
+
+#quickstartbuttons-widget ul li div {
+	display: table-cell;
+	height: 64px;
+	width: 100%;
+	vertical-align: middle;
+}
+
 #quickstartbuttons-widget ul li a span {
     display: block;
     line-height: 1.4;
-}
-#quickstartbuttons-widget ul li a span.headline {
     font-size: 12px;
 }
 #quickstartbuttons-widget ul li a span em {
     font-weight: normal;
     font-style: normal;
+    font-size: 11px;
 }
 #quickstartbuttons-widget ul li a .icon {
     display: block;
     position: absolute;
-    left: 0;
+    left: 1px;
     top: 0;
     width: 52px;
     height: 100%;
@@ -100,6 +131,7 @@
     line-height: 65px;
     background-repeat: no-repeat;
     background-position: center center;
+    font-size: 24px;
 }
 
 #quickstartbuttons-widget ul li a .icon {
