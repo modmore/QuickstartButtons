@@ -11,6 +11,7 @@ $xpdo_meta_map['qsbButton']= array (
     'text' => NULL,
     'description' => '',
     'action_id' => 0,
+    'action_props' => NULL,
     'handler' => NULL,
     'link' => NULL,
     'newwindow' => 0,
@@ -59,6 +60,13 @@ $xpdo_meta_map['qsbButton']= array (
       'phptype' => 'integer',
       'null' => true,
       'default' => 0,
+    ),
+    'action_props' => 
+    array (
+      'dbtype' => 'text',
+      'phptype' => 'string',
+      'null' => true,
+      'default' => NULL,
     ),
     'handler' => 
     array (

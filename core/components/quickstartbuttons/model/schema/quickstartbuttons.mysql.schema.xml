@@ -32,6 +32,7 @@
         <field key="description" dbtype="text" phptype="string" null="false" default="" />
 
         <field key="action_id" dbtype="int" precision="11" phptype="integer" null="true" default="NULL" />
+        <field key="action_props" dbtype="text" phptype="string" null="true" default="NULL" />
         <field key="handler" dbtype="varchar" precision="255" phptype="string" null="true" default="NULL" />
         <field key="link" dbtype="varchar" precision="255" phptype="string" null="true" default="NULL" />
         <field key="newwindow" dbtype="tinyint" precision="1" phptype="boolean" null="false" default="0" />

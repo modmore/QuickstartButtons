@@ -14,7 +14,18 @@ class QuickstartButtonsDashboardWidget extends modDashboardWidgetInterface {
 		$this->modx->response->addLangTopic('quickstartbuttons:dashboard');
         $this->modx->controller->addCss($this->qsb->config['cssUrl'].'mgr.css');
 
-        $output = $this->getDashboardButtons();
+        // caching
+        $cacheKey = 'qsb/'.md5(implode(',', $this->modx->user->getUserGroupNames()));
+        $cacheLifetime = 84600;
+
+        // get output
+        $output = $this->modx->cacheManager->get($cacheKey);
+        if(empty($output)) {
+
+            $output = $this->getDashboardButtons();
+            $this->modx->cacheManager->set($cacheKey, $output, $cacheLifetime);
+        }
+
 		return $output;
 	}
 
@@ -57,8 +68,15 @@ class QuickstartButtonsDashboardWidget extends modDashboardWidgetInterface {
                     $phs['href'] = '';
 
                     // figure out the link
-                    $btnAction = $button->get('action');
-                    if(!empty($btnAction)) { $phs['href'] = '?a='.$btnAction; }
+                    $btnAction = $button->get('action_id');
+                    if(!empty($btnAction)) {
+                        $phs['href'] = '?a='.$btnAction;
+
+                        $btnActionProps = $button->get('action_props');
+                        if(!empty($btnActionProps)) {
+                            $phs['href'] .= '&'.$btnActionProps;
+                        }
+                    }
                     $btnLink = $button->get('link');
                     if(!empty($btnLink)) { $phs['href'] = $btnLink; }
 

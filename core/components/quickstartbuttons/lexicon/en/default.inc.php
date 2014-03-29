@@ -41,6 +41,8 @@ $_lang['quickstartbuttons.buttons.active'] = "Active";
 $_lang['quickstartbuttons.buttons.link'] = "Link";
 $_lang['quickstartbuttons.buttons.link_desc'] = "Below you can configure the action for the button. The priority of the link to use is from top down. This means that if you set the first, the second and third will be ignored and if you leave the first empty, set the second, the third one will be ignored etc.";
 $_lang['quickstartbuttons.buttons.link.action'] = "Systems Action";
+$_lang['quickstartbuttons.buttons.link.action_props'] = "Systems Action additional properties";
+$_lang['quickstartbuttons.buttons.link.action_props_desc'] = "Extra properties for the systems action. Don't include ? or &amp; as start of the string.<br />Like: parent=10&amp;template=1&amp;class_key=modResource.";
 $_lang['quickstartbuttons.buttons.link.handler'] = "Javascript Handler";
 $_lang['quickstartbuttons.buttons.link.handler_desc'] = "Like the MODX clear cache handler: MODx.clearCache(); .. It will automatically add a 'return false;' on the link.";
 $_lang['quickstartbuttons.buttons.link.full'] = "Full Link";

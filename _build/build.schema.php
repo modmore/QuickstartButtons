@@ -49,4 +49,4 @@ $manager->createObjectContainer('qsbIcon');
 
 //$manager->alterField('qsbButton', 'iconcls');
 //$manager->removeField('qsbButton', 'link_target');
-//$manager->addField('qsbButton', 'newwindow', array('after' => 'link'));
+//$manager->addField('qsbButton', 'action_props', array('after' => 'action_id'));

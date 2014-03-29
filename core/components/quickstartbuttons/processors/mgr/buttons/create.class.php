@@ -19,6 +19,13 @@ class QuickstartButtonsCreateProcessor extends modObjectCreateProcessor {
 
         return parent::beforeSet();
     }
+
+    public function afterSave() {
+        $this->modx->cacheManager->refresh(array(
+            'default' => array('qsb' => array()),
+        ));
+        return parent::afterSave();
+    }
 }
 
 return 'QuickstartButtonsCreateProcessor';

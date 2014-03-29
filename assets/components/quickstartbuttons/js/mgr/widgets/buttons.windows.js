@@ -13,7 +13,7 @@ QuickstartButtons.window.CreateUpdateButton = function(config) {
             action: ((config.isUpdate) ? 'mgr/buttons/update' : 'mgr/buttons/create')
             ,set: config.setId || config.record.set
         }
-        ,width: 600
+        ,width: 650
         ,resizable: false
         ,maximizable: false
         ,modal: true
@@ -22,7 +22,7 @@ QuickstartButtons.window.CreateUpdateButton = function(config) {
             ,name: 'id'
         },{
             xtype: 'modx-vtabs'
-            ,width: 450
+            ,width: 500
             ,autoHeight: true
             ,deferredRender: false
             ,forceLayout: true
@@ -119,6 +119,16 @@ QuickstartButtons.window.CreateUpdateButton = function(config) {
                         ,showNone: true
                         ,selected: config.record.action_id
                     }
+                },{
+                    xtype: 'textfield'
+                    ,fieldLabel: _('quickstartbuttons.buttons.link.action_props')
+                    ,description: _('quickstartbuttons.buttons.link.action_props_desc')
+                    ,name: 'action_props'
+                    ,anchor: '100%'
+                },{
+                    xtype: 'label'
+                    ,html: _('quickstartbuttons.buttons.link.action_props_desc')
+                    ,cls: 'desc-under'
                 },{
                     xtype: 'textfield'
                     ,fieldLabel: _('quickstartbuttons.buttons.link.handler')

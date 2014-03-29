@@ -1,5 +1,13 @@
 - Fix installing defaults on upgrade
 
+++ QuickstartButtons 1.0.1-pl
+++ Released on 2014-03-29
++++++++++++++++++++++++++
+- New feature: system action properties passed by string
+- Improvement: caching on dashboard widget, per user group names of the user
+- Styling issues dashboard buttons fixed (Thanks to @christianseel)
+
+
 ++ QuickstartButtons 1.0.0-pl
 ++ Released on 2014-03-24
 +++++++++++++++++++++++++
