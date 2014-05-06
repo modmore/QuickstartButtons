@@ -8,7 +8,7 @@ QuickstartButtons.grid.Buttons = function(config) {
 		,save_action: 'mgr/buttons/updateFromGrid'
 		,autosave: true
 
-		,fields: ['id','set','icon','iconcls','iconpath','text','description','ranking','action_id','action_props','handler','link','newwindow','active']
+		,fields: ['id','set','icon','icon_ms','icon_file','iconcls','iconpath','text','description','ranking','action_id','action_props','handler','link','newwindow','active']
 		,paging: true
         ,pageSize: 6
 		,remoteSort: true
@@ -119,11 +119,10 @@ Ext.extend(QuickstartButtons.grid.Buttons, MODx.grid.Grid, {
         var r = s.getAt(ri).data;
 
         if(!Ext.isEmpty(r.iconpath)) {
-            return '<i class="icon ' + (!Ext.isEmpty(r.iconcls) ? r.iconcls : '') + '" style="background-image: url(' + r.iconpath + ')"></i> ' + v;
+            return '<i class="icon" style="background-image: url(' + r.iconpath + ')"></i> ' + v;
         }
 
-        var iconCls = (!Ext.isEmpty(r.iconcls) ? r.iconcls : 'fa-chevron-right');
-        return '<i class="fa fa-larger ' + iconCls + '"></i> ' + v;
+        return '<i class="fa fa-larger ' + r.iconcls + '"></i> ' + v;
     }
 	,renderYNfield: function(v,md,rec,ri,ci,s,g) {
         var r = s.getAt(ri).data;

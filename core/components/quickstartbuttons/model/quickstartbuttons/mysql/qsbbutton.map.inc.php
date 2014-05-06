@@ -6,8 +6,10 @@ $xpdo_meta_map['qsbButton']= array (
   'extends' => 'xPDOSimpleObject',
   'fields' => 
   array (
-    'set' => 0,
+    'set' => NULL,
     'icon' => 0,
+    'icon_ms' => 0,
+    'icon_file' => NULL,
     'text' => NULL,
     'description' => '',
     'action_id' => 0,
@@ -26,7 +28,6 @@ $xpdo_meta_map['qsbButton']= array (
       'precision' => '11',
       'phptype' => 'integer',
       'null' => false,
-      'default' => 0,
       'index' => 'index',
     ),
     'icon' => 
@@ -34,9 +35,26 @@ $xpdo_meta_map['qsbButton']= array (
       'dbtype' => 'int',
       'precision' => '11',
       'phptype' => 'integer',
-      'null' => false,
+      'null' => true,
       'default' => 0,
       'index' => 'index',
+    ),
+    'icon_ms' => 
+    array (
+      'dbtype' => 'int',
+      'precision' => '11',
+      'phptype' => 'integer',
+      'null' => true,
+      'default' => 0,
+      'index' => 'index',
+    ),
+    'icon_file' => 
+    array (
+      'dbtype' => 'varchar',
+      'precision' => '255',
+      'phptype' => 'string',
+      'null' => true,
+      'default' => NULL,
     ),
     'text' => 
     array (
@@ -131,6 +149,14 @@ $xpdo_meta_map['qsbButton']= array (
     array (
       'class' => 'modAction',
       'local' => 'action_id',
+      'foreign' => 'id',
+      'cardinality' => 'one',
+      'owner' => 'foreign',
+    ),
+    'MediaSource' => 
+    array (
+      'class' => 'modMediaSource',
+      'local' => 'icon_ms',
       'foreign' => 'id',
       'cardinality' => 'one',
       'owner' => 'foreign',

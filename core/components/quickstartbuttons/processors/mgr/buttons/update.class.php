@@ -7,6 +7,8 @@ class QuickstartButtonsUpdateProcessor extends modObjectUpdateProcessor {
 
     public function beforeSet() {
 
+        // link
+
         $action = $this->getProperty('action_id');
         if(empty($action)) { $this->setProperty('action_id', null); }
         else { $this->setProperty('action', $action); }
@@ -16,6 +18,17 @@ class QuickstartButtonsUpdateProcessor extends modObjectUpdateProcessor {
 
         $link = $this->getProperty('link');
         if(empty($link)) { $this->setProperty('link', null); }
+
+        // icon
+
+        $icon = $this->getProperty('icon');
+        if(empty($icon)) { $this->setProperty('icon', null); }
+
+        $iconms = $this->getProperty('icon_ms');
+        if(empty($iconms)) { $this->setProperty('icon_ms', null); }
+
+        $iconfile = $this->getProperty('icon_file');
+        if(empty($iconfile)) { $this->setProperty('icon_file', null); }
 
         return parent::beforeSet();
     }

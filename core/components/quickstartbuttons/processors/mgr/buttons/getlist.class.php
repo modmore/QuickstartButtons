@@ -7,11 +7,6 @@ class QuickstartButtonsGetListProcessor extends modObjectGetListProcessor {
 	public $defaultSortDirection = 'ASC';
 	public $objectType = 'quickstartbuttons.qsbbutton';
 
-    public function initialize() {
-        $this->modx->getParser();
-        return parent::initialize();
-    }
-
     public function prepareQueryBeforeCount(xPDOQuery $c) {
 
         $c->select(array('qsbButton.*', 'Icon.class AS iconcls', 'Icon.path as iconpath'));
@@ -27,16 +22,6 @@ class QuickstartButtonsGetListProcessor extends modObjectGetListProcessor {
         }
 
         return $c;
-    }
-
-    public function prepareRow(xPDOObject $object) {
-        $arr = $object->toArray();
-
-        $path = $object->get('iconpath');
-        $this->modx->parser->processElementTags('', $path, true, true);
-        $arr['iconpath'] = $path;
-
-        return $arr;
     }
 }
 

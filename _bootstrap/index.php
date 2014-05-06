@@ -135,6 +135,10 @@ foreach ($objectContainers as $oC) {
     $manager->createObjectContainer($oC);
 }
 
+$manager->alterField('qsbButton', 'icon');
+$manager->addField('qsbButton', 'icon_ms', array('after' => 'icon'));
+$manager->addField('qsbButton', 'icon_file', array('after' => 'icon_ms'));
+
 if (isset($_GET['loadIcons'])) {
     echo "Loading icons..\n";
 

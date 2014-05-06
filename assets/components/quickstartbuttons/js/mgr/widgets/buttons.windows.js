@@ -3,15 +3,15 @@
 QuickstartButtons.window.CreateUpdateButton = function(config) {
 	config = config || {};
     this.ident = config.ident || Ext.id();
-
+console.log(config);
     Ext.applyIf(config,{
-		title: _('quickstartbuttons.sets.update')
+		title: _('quickstartbuttons.buttons.create')
         ,cls: 'quickstartbuttons-window-vtabs'
         ,bodyCssClass: 'window-vtabs'
         ,url: QuickstartButtons.config.connector_url
 		,baseParams: {
             action: ((config.isUpdate) ? 'mgr/buttons/update' : 'mgr/buttons/create')
-            ,set: config.setId || config.record.set
+            ,set: ((config.isUpdate) ? config.record.set : config.setId)
         }
         ,width: 650
         ,resizable: false
@@ -39,33 +39,11 @@ QuickstartButtons.window.CreateUpdateButton = function(config) {
                 title: _('quickstartbuttons.general')
                 ,layout: 'form'
                 ,items: [{
-                    layout: 'column'
-                    ,border: false
-                    ,defaults: { msgTarget: 'under' ,border: false }
-                    ,items: [{
-                        layout: 'form'
-                        ,columnWidth: .5
-                        ,defaults: { msgTarget: 'under' ,border: false }
-                        ,items: [{
-                            xtype: 'textfield'
-                            ,fieldLabel: _('quickstartbuttons.buttons.text')
-                            ,name: 'text'
-                            ,anchor: '100%'
-                            ,allowBlank: false
-                        }]
-                    },{
-                        layout: 'form'
-                        ,columnWidth: .5
-                        ,defaults: { msgTarget: 'under' ,border: false }
-                        ,items: [{
-                            xtype: 'quickstartbuttons-combo-icons'
-                            ,fieldLabel: _('quickstartbuttons.buttons.icon')
-                            ,name: 'icon'
-                            ,anchor: '100%'
-                            ,allowBlank: false
-                            ,selected: config.record.icon
-                        }]
-                    }]
+                    xtype: 'textfield'
+                    ,fieldLabel: _('quickstartbuttons.buttons.text')
+                    ,name: 'text'
+                    ,anchor: '100%'
+                    ,allowBlank: false
                 },{
                     xtype: 'textarea'
                     ,fieldLabel: _('quickstartbuttons.buttons.description')
@@ -99,6 +77,59 @@ QuickstartButtons.window.CreateUpdateButton = function(config) {
                             ,name: 'active'
                         }]
                     }]
+                }]
+            },{
+                title: _('quickstartbuttons.buttons.icon')
+                ,layout: 'form'
+                ,items: [/*{
+                    html: '<p>' + _('quickstartbuttons.buttons.icon_desc') + '</p><br/>'
+                    ,border: false
+                },*/{
+                    xtype: 'quickstartbuttons-combo-icons'
+                    ,name: 'icon'
+                    ,fieldLabel: _('quickstartbuttons.buttons.icon.preset')
+                    ,anchor: '100%'
+                    ,allowBlank: true
+                    ,selected: config.record.icon
+                },{
+                    html: '<br/>'
+                    ,border: false
+                },{
+                    html: '----- ' + _('quickstartbuttons.buttons.icon.or') + ' -----'
+                    ,border: false
+                    ,bodyStyle: 'text-align:center;'
+                },{
+                    html: '<br/>'
+                    ,border: false
+                },{
+                    xtype: 'modx-combo-source'
+                    ,id: 'quickstartbuttons-button-icon-ms-'+this.ident
+                    ,name: 'icon_ms'
+                    ,hiddenName: 'icon_ms'
+                    ,fieldLabel: _('quickstartbuttons.buttons.icon.ms')
+                    ,anchor: '100%'
+                    ,allowBlank: true
+                    ,listeners: {
+                        'select': { fn: function(cb,rec,idx) {
+                            var fileFld = Ext.getCmp('quickstartbuttons-button-icon-msbrowse-'+this.ident);
+                                fileFld.config.source = rec.id;
+                                fileFld.browser = null; // to make the browser load again
+                                fileFld.setValue('');
+                                fileFld.setDisabled(false);
+                        } ,scope: this }
+                        ,scope: this
+                    }
+                },{
+                    xtype: 'modx-combo-browser'
+                    ,id: 'quickstartbuttons-button-icon-msbrowse-'+this.ident
+                    ,name: 'icon_file'
+                    ,hiddenName: 'icon_file'
+                    ,fieldLabel: _('quickstartbuttons.buttons.icon.select')
+                    ,anchor: '100%'
+                    ,allowBlank: true
+                    ,disabled: ((config.isUpdate && !Ext.isEmpty(config.record.icon_ms)) ? false : true)
+                    ,hideSourceCombo: true
+                    ,allowedFileTypes: 'png,jpg,jpeg,gif,bmp,tiff'
                 }]
             },{
                 title: _('quickstartbuttons.buttons.link')

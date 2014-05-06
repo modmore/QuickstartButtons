@@ -63,6 +63,7 @@ class QuickstartButtonsDashboardWidget extends modDashboardWidgetInterface {
                 $idx = 1;
                 foreach($buttons as $button) {
 
+                    /** @var qsbButton $button */
                     $phs = $button->toArray();
                     $phs['idx'] = $idx;
                     $phs['href'] = '';

@@ -33,11 +33,16 @@ $_lang['quickstartbuttons.buttons'] = "Buttons";
 $_lang['quickstartbuttons.buttons_desc'] = "Below you will find the buttons configured in this set.";
 $_lang['quickstartbuttons.buttons.create'] = "Add new button";
 
-$_lang['quickstartbuttons.buttons.icon'] = "Button Icon";
 $_lang['quickstartbuttons.buttons.text'] = "Button Text";
 $_lang['quickstartbuttons.buttons.description'] = "Description";
 $_lang['quickstartbuttons.buttons.ranking'] = "Ranking";
 $_lang['quickstartbuttons.buttons.active'] = "Active";
+
+$_lang['quickstartbuttons.buttons.icon'] = "Icon";
+$_lang['quickstartbuttons.buttons.icon.preset'] = "Search & choose a preset icon";
+$_lang['quickstartbuttons.buttons.icon.or'] = "Or select a custom icon below";
+$_lang['quickstartbuttons.buttons.icon.ms'] = "The Media Source to search icons for";
+$_lang['quickstartbuttons.buttons.icon.select'] = "Select an icon from Media Source";
 
 $_lang['quickstartbuttons.buttons.link'] = "Link";
 $_lang['quickstartbuttons.buttons.link_desc'] = "Below you can configure the action for the button. The priority of the link to use is from top down. This means that if you set the first, the second and third will be ignored and if you leave the first empty, set the second, the third one will be ignored etc.";

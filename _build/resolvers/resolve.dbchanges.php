@@ -1,5 +1,6 @@
 <?php
 
+/** @var xPDO|modX $modx */
 $modx =& $object->xpdo;
 
 switch($options[xPDOTransport::PACKAGE_ACTION]) {
@@ -16,7 +17,13 @@ switch($options[xPDOTransport::PACKAGE_ACTION]) {
         $oldLogLevel = $modx->getLogLevel();
         $modx->setLogLevel(0);
 
-		$manager->addField('qsbButton', 'action_props', array('after' => 'action_id')); // since 1.0.1
+        // since 1.0.1
+		$manager->addField('qsbButton', 'action_props', array('after' => 'action_id'));
+
+        // since 1.1.0
+        $manager->alterField('qsbButton', 'icon');
+        $manager->addField('qsbButton', 'icon_ms', array('after' => 'icon'));
+        $manager->addField('qsbButton', 'icon_file', array('after' => 'icon_ms'));
 
         // set back console logging
         $modx->setLogLevel($oldLogLevel);

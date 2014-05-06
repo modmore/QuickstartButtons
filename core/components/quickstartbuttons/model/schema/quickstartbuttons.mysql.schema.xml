@@ -26,8 +26,10 @@
 	</object>
 
     <object class="qsbButton" table="quickstartbuttons_buttons" extends="xPDOSimpleObject">
-        <field key="set" dbtype="int" precision="11" phptype="integer" null="false" default="0" index="index" />
-        <field key="icon" dbtype="int" precision="11" phptype="integer" null="false" default="" index="index" />
+        <field key="set" dbtype="int" precision="11" phptype="integer" null="false" index="index" />
+        <field key="icon" dbtype="int" precision="11" phptype="integer" null="true" default="NULL" index="index" />
+        <field key="icon_ms" dbtype="int" precision="11" phptype="integer" null="true" default="NULL" index="index" />
+        <field key="icon_file" dbtype="varchar" precision="255" phptype="string" null="true" default="NULL" />
         <field key="text" dbtype="varchar" precision="255" phptype="string" null="false" index="index" />
         <field key="description" dbtype="text" phptype="string" null="false" default="" />
 
@@ -43,6 +45,7 @@
         <aggregate alias="Set" class="qsbSet" local="profile" foreign="id" cardinality="one" owner="foreign" />
         <aggregate alias="Icon" class="qsbIcon" local="icon" foreign="id" cardinality="one" owner="foreign" />
         <aggregate alias="Action" class="modAction" local="action_id" foreign="id" cardinality="one" owner="foreign" />
+        <aggregate alias="MediaSource" class="modMediaSource" local="icon_ms" foreign="id" cardinality="one" owner="foreign" />
     </object>
 
     <object class="qsbIcon" table="quickstartbuttons_icons" extends="xPDOSimpleObject">

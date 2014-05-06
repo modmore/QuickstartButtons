@@ -3,7 +3,7 @@
 define('PKG_NAME', 'QuickstartButtons');
 define('PKG_NAME_LOWER', strtolower(PKG_NAME));
 
-require_once dirname(__FILE__).'/build.config.php';
+require_once dirname(dirname(__FILE__)) . '/config.core.php';
 include_once MODX_CORE_PATH . 'model/modx/modx.class.php';
 
 $modx = new modX();
