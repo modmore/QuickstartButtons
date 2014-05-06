@@ -1,5 +1,12 @@
 - Fix installing defaults on upgrade
 
+++ QuickstartButtons 1.1.0-pl
+++ Released on 2014-05-06
++++++++++++++++++++++++++
+- New feature: added customizable icons for buttons (Media Source & File selection)
+- New feature: duplicate set (with buttons)
+
+
 ++ QuickstartButtons 1.0.1-pl
 ++ Released on 2014-03-29
 +++++++++++++++++++++++++
