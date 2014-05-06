@@ -24,6 +24,7 @@ $_lang['quickstartbuttons.sets.buttonsperrow.four'] = "Four buttons";
 $_lang['quickstartbuttons.sets.buttonsperrow.five'] = "Five buttons";
 
 $_lang['quickstartbuttons.sets.update'] = "Update set";
+$_lang['quickstartbuttons.sets.duplicate'] = "Duplicate set";
 $_lang['quickstartbuttons.sets.remove'] = "Remove set";
 $_lang['quickstartbuttons.sets.remove_confirm'] = "Are you sure you want to remove this set and it's buttons? This is irreversible!";
 

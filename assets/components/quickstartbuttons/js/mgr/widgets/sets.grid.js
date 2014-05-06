@@ -86,6 +86,9 @@ Ext.extend(QuickstartButtons.grid.Sets, MODx.grid.Grid, {
 		var m = [{
             text: _('quickstartbuttons.sets.update')
             ,handler: this.updateSet
+        },{
+            text: _('quickstartbuttons.sets.duplicate')
+            ,handler: this.duplicateSet
         },'-',{
 			text: _('quickstartbuttons.sets.remove')
 			,handler: this.removeSet
@@ -109,6 +112,21 @@ Ext.extend(QuickstartButtons.grid.Sets, MODx.grid.Grid, {
 		w.show(e.target, function() {
 			Ext.isSafari ? w.setPosition(null,30) : w.center();
 		}, this);
+    }
+    ,duplicateSet: function(btn, e) {
+        MODx.Ajax.request({
+            url: QuickstartButtons.config.connector_url
+            ,params: {
+                action: 'mgr/sets/duplicate'
+                ,id: this.menu.record.id
+            }
+            ,listeners: {
+                'success':{ fn: function() {
+                    this.refresh();
+                }
+                ,scope:this }
+            }
+        });
     }
     ,removeSet: function(btn, e) {
 		MODx.msg.confirm({
