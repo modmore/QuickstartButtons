@@ -16,7 +16,7 @@ class QuickstartButtonsDashboardWidget extends modDashboardWidgetInterface {
 
         // caching
         $cacheKey = 'qsb/'.md5(implode(',', $this->modx->user->getUserGroupNames()));
-        $cacheLifetime = 84600;
+        $cacheLifetime = 86400;
 
         // get output
         $output = $this->modx->cacheManager->get($cacheKey);
