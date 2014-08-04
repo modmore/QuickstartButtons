@@ -11,6 +11,7 @@ QuickstartButtons.window.CreateSet = function(config) {
 			action: 'mgr/sets/create'
 		}
 		,modal: true
+        ,autoHeight: true
 		,width: 450
 		,fields: [{
 			xtype: 'textfield'
@@ -80,6 +81,7 @@ QuickstartButtons.window.UpdateSet = function(config) {
         ,width: 800
         ,resizable: false
         ,maximizable: false
+        ,autoHeight: true
         ,modal: true
         ,fields: [{
             xtype: 'hidden'

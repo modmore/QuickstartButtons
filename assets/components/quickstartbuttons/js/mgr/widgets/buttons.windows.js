@@ -3,7 +3,7 @@
 QuickstartButtons.window.CreateUpdateButton = function(config) {
 	config = config || {};
     this.ident = config.ident || Ext.id();
-console.log(config);
+
     Ext.applyIf(config,{
 		title: _('quickstartbuttons.buttons.create')
         ,cls: 'quickstartbuttons-window-vtabs'
@@ -17,6 +17,7 @@ console.log(config);
         ,resizable: false
         ,maximizable: false
         ,modal: true
+        ,autoHeight: true
         ,fields: [{
             xtype: 'hidden'
             ,name: 'id'

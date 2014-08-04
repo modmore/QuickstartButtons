@@ -9,6 +9,7 @@ QuickstartButtons.window.AddUserGroup = function(config) {
 		,url: QuickstartButtons.config.connector_url
 		,baseParams: { action: 'mgr/usergroups/create', set: config.setId }
 		,width: 450
+        ,autoHeight: true
 		,fields: [{
             xtype: 'quickstartbuttons-combo-usergroups'
             ,hideLabel: true

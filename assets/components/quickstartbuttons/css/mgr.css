@@ -151,7 +151,31 @@ i.icon {
 }
 
 /* Vertical window tabs */
-.window-vtabs .x-panel-ml { padding: 0 !important; }
-.window-vtabs .x-panel-mc { padding: 0 !important; }
-.window-vtabs .vertical-tabs-panel { width: 100% !important; }
-.window-vtabs .x-panel-mc .x-panel-tbar .x-toolbar { background-color: transparent; }
+.window-vtabs .x-panel-ml {
+  padding: 0 !important;
+}
+.window-vtabs .x-panel-mc {
+  padding: 0 !important;
+}
+.window-vtabs .vertical-tabs-panel {
+  width: 100% !important;
+}
+.window-vtabs .x-panel-mc .x-panel-tbar .x-toolbar {
+  background-color: transparent;
+}
+.window-vtabs .x-panel.panel-desc {
+  border-right: 1px solid #e7e7e7;
+  border-left: 1px solid #e7e7e7;
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+.window-vtabs .x-tab-panel-bwrap {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.window-vtabs .x-tab-panel-bwrap .x-tab-panel-body {
+  overflow: hidden !important;
+}
+.window-vtabs.x-window-body {
+  padding: 0;
+}

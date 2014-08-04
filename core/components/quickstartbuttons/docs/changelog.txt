@@ -1,3 +1,4 @@
+- Give windows an automatic height and fix 2.3 window vtabs styling
 - Ensure menu item is created on 2.3 by moving to components
 
 ++ QuickstartButtons 1.1.0-pl
