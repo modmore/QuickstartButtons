@@ -1,4 +1,4 @@
-- Fix installing defaults on upgrade
+- Ensure menu item is created on 2.3 by moving to components
 
 ++ QuickstartButtons 1.1.0-pl
 ++ Released on 2014-05-06
@@ -6,14 +6,13 @@
 - New feature: added customizable icons for buttons (Media Source & File selection)
 - New feature: duplicate set (with buttons)
 
-
 ++ QuickstartButtons 1.0.1-pl
 ++ Released on 2014-03-29
 +++++++++++++++++++++++++
 - New feature: system action properties passed by string
 - Improvement: caching on dashboard widget, per user group names of the user
 - Styling issues dashboard buttons fixed (Thanks to @christianseel)
-
+- Fix installing defaults on upgrade
 
 ++ QuickstartButtons 1.0.0-pl
 ++ Released on 2014-03-24

@@ -14,7 +14,7 @@ $action->fromArray(array(
 $menu = $modx->newObject('modMenu');
 $menu->fromArray(array(
     'text' => PKG_NAME_LOWER,
-    'parent' => 'dashboard',
+    'parent' => 'components',
     'description' => PKG_NAME_LOWER.'.menu_desc',
     'icon' => 'images/icons/plugin.gif',
     'menuindex' => 0,
