@@ -107,7 +107,7 @@ $action = $modx->getObject('modAction', array('namespace' => 'quickstartbuttons'
 if ($action) {
     if (!createObject('modMenu', array(
         'text' => 'quickstartbuttons',
-        'parent' => 'dashboard',
+        'parent' => 'components',
         'description' => 'quickstartbuttons.menu_desc',
         'icon' => 'images/icons/plugin.gif',
         'menuindex' => 0,
@@ -115,7 +115,7 @@ if ($action) {
         'handler' => '',
         'permissions' => 'dashboards',
         'action' => $action->get('id')
-    ), 'text', false)) {
+    ), 'text', true)) {
         echo "Error creating modMenu.\n";
     }
 }
