@@ -17,7 +17,7 @@ $menu->fromArray(array(
     'parent' => 'components',
     'description' => PKG_NAME_LOWER.'.menu_desc',
     'icon' => 'images/icons/plugin.gif',
-    'menuindex' => 0,
+    'menuindex' => 99,
     'params' => '',
     'handler' => '',
     'permissions' => 'dashboards',

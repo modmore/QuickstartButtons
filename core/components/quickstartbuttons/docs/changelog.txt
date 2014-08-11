@@ -1,3 +1,4 @@
+- Move menu item lower in the top nav to make sure the Installer stays first
 - Conditionally load MODX 2.3 specific stylesheet (thanks Tomislav J!)
 
 ++ QuickstartButtons 1.1.1-pl

@@ -110,10 +110,10 @@ if ($action) {
         'parent' => 'components',
         'description' => 'quickstartbuttons.menu_desc',
         'icon' => 'images/icons/plugin.gif',
-        'menuindex' => 0,
+        'menuindex' => 99,
         'params' => '',
         'handler' => '',
-        'permissions' => 'dashboards',
+        'permissions' => 'components',
         'action' => $action->get('id')
     ), 'text', true)) {
         echo "Error creating modMenu.\n";
