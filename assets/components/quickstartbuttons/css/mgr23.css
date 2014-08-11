@@ -1,0 +1,165 @@
+@import url('../fontawesome/fonts.css');
+
+/* Dashboard Widget */
+
+#quickstartbuttons-widget {
+    width: auto;
+    overflow: hidden;
+    margin: -10px;
+	background: rgba(230, 230, 230, 0.7);
+}
+#quickstartbuttons-widget > p {
+	margin: 10px 0px 0px;
+	background-color: #F7F7F7;
+	border-bottom: 1px solid #E7E7E7;
+	border-top: 1px solid #E7E7E7;
+	color: #5A5A5A;
+	line-height: 1.5;
+	padding: 15px;
+	font-size: 13px;
+}
+
+#quickstartbuttons-widget ul {
+	display: block;
+    width: 100%;
+    margin: 0;
+    padding: 5px;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+}
+
+#quickstartbuttons-widget ul:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+}
+
+#quickstartbuttons-widget ul li {
+    display: block;
+    float: left;
+    position: relative;
+    width: 33.333%;
+    margin: 0;
+    padding: 5px;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+}
+
+#quickstartbuttons-widget ul.one-item-per-row { margin: 0; }
+#quickstartbuttons-widget ul.one-item-per-row li { width: 100%; }
+#quickstartbuttons-widget ul.two-items-per-row li { width: 50%; }
+#quickstartbuttons-widget ul.three-items-per-row li { width: 33.333%; }
+#quickstartbuttons-widget ul.four-items-per-row li { width: 25%; }
+#quickstartbuttons-widget ul.five-items-per-row li { width: 20%; }
+
+#quickstartbuttons-widget ul li a {
+    display: block;
+    min-height: 65px;
+    width: 100%;
+    position: relative;
+    padding: 5px 15px 5px 52px;
+	background-color: #fff;
+    border: 0 none;
+	border-radius:3px;
+    box-shadow: 0 0 0 1px #e4e4e4;
+
+    color: #555;
+	font: bold 11px tahoma, verdana, helvetica, sans-serif;
+	text-decoration: none;
+    cursor: pointer;
+
+	box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-webkit-font-smoothing: antialiased;
+}
+#quickstartbuttons-widget ul li a:hover {
+    background-color: rgb(245,246,249);
+	background-color:#3697CD;
+	color:#fff;
+}
+
+#quickstartbuttons-widget ul li div {
+	display: table-cell;
+	height: 64px;
+	width: 100%;
+	vertical-align: middle;
+}
+
+#quickstartbuttons-widget ul li a span {
+    display: block;
+    line-height: 1.3;
+    font-size: 14px;
+}
+#quickstartbuttons-widget ul li a span em {
+    font-weight: normal;
+    font-style: normal;
+    font-size: 12px;
+}
+#quickstartbuttons-widget ul li a .icon {
+    display: block;
+    position: absolute;
+    left: 1px;
+    top: 0;
+    width: 52px;
+    height: 100%;
+    text-align: center;
+    line-height: 70px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    font-size: 30px;
+}
+
+#quickstartbuttons-widget ul li a .icon {
+
+}
+
+/* Manager window */
+
+i.fa.fa-larger { font-size: 1.2em; }
+i.icon {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: left center;
+}
+
+/* Vertical window tabs */
+.window-vtabs .x-panel-ml {
+  padding: 0 !important;
+}
+.window-vtabs .x-panel-mc {
+  padding: 0 !important;
+}
+.window-vtabs .vertical-tabs-panel {
+  width: 100% !important;
+}
+.window-vtabs .x-panel-mc .x-panel-tbar .x-toolbar {
+  background-color: transparent;
+}
+.window-vtabs .x-panel.panel-desc {
+  border-right: 1px solid #e7e7e7;
+  border-left: 1px solid #e7e7e7;
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+.window-vtabs .x-tab-panel-bwrap {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.window-vtabs .x-tab-panel-bwrap .x-tab-panel-body {
+  overflow: hidden !important;
+}
+.window-vtabs.x-window-body {
+  padding: 0;
+}

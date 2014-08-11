@@ -1,3 +1,5 @@
+- Conditionally load MODX 2.3 specific stylesheet (thanks Tomislav J!)
+
 ++ QuickstartButtons 1.1.1-pl
 ++ Released on 2014-08-04
 +++++++++++++++++++++++++

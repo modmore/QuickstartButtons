@@ -12,7 +12,17 @@ class QuickstartButtonsDashboardWidget extends modDashboardWidgetInterface {
 
 		// to load lexicons normally
 		$this->modx->response->addLangTopic('quickstartbuttons:dashboard');
-        $this->modx->controller->addCss($this->qsb->config['cssUrl'].'mgr.css');
+
+        // Load the CSS
+        $v = $this->modx->getVersionData();
+        if (version_compare($v['full_version'],'2.3.0-pl') === -1)
+        {
+            $this->modx->controller->addCss($this->qsb->config['cssUrl'].'mgr.css');
+        }
+        else
+        {
+            $this->modx->controller->addCss($this->qsb->config['cssUrl'].'mgr23.css');
+        }
 
         // caching
         $cacheKey = 'qsb/'.md5(implode(',', $this->modx->user->getUserGroupNames()));
@@ -21,7 +31,6 @@ class QuickstartButtonsDashboardWidget extends modDashboardWidgetInterface {
         // get output
         $output = $this->modx->cacheManager->get($cacheKey);
         if(empty($output)) {
-
             $output = $this->getDashboardButtons();
             $this->modx->cacheManager->set($cacheKey, $output, $cacheLifetime);
         }
@@ -29,8 +38,8 @@ class QuickstartButtonsDashboardWidget extends modDashboardWidgetInterface {
 		return $output;
 	}
 
-    public function getDashboardButtons() {
-
+    public function getDashboardButtons()
+    {
         $usrGroupIds = (array) $this->modx->user->getUserGroups();
         $output = '';
 
