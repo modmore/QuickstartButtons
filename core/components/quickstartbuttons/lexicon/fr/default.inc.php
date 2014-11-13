@@ -39,7 +39,7 @@ $_lang['quickstartbuttons.buttons.ranking'] = "Ordre";
 $_lang['quickstartbuttons.buttons.active'] = "Actif";
 
 $_lang['quickstartbuttons.buttons.icon'] = "Icône";
-$_lang['quickstartbuttons.buttons.icon.preset'] = "Sélectionner une icône pré-enregistrée";
+$_lang['quickstartbuttons.buttons.icon.preset'] = "Sélectionner une icône préenregistrée";
 $_lang['quickstartbuttons.buttons.icon.or'] = "Ou sélectionner une icône personnalisée";
 $_lang['quickstartbuttons.buttons.icon.ms'] = "Média source à utiliser pour rechercher l'icône";
 $_lang['quickstartbuttons.buttons.icon.select'] = "Sélectionner une icône à partir du média source";
@@ -47,7 +47,7 @@ $_lang['quickstartbuttons.buttons.icon.select'] = "Sélectionner une icône à p
 $_lang['quickstartbuttons.buttons.link'] = "Lien";
 $_lang['quickstartbuttons.buttons.link_desc'] = "Ci-dessous, vous pouvez configurer les actions pour le bouton. L'ordre de priorité des liens se fait de haut en bas. Cela signifie que seul le premier lien renseigné sera pris en compte.";
 $_lang['quickstartbuttons.buttons.link.action'] = "Actions système";
-$_lang['quickstartbuttons.buttons.link.action_props'] = "Propriétés aditionnelles pour les actions système";
+$_lang['quickstartbuttons.buttons.link.action_props'] = "Propriétés additionnelles pour les actions système";
 $_lang['quickstartbuttons.buttons.link.action_props_desc'] = "Propriétés supplémentaires pour les actions système. Ne pas inclure les caractères «&nbsp;?&nbsp;» ou «&nbsp;&amp;&nbsp;» au début de la chaine de caractères.<br />Exemple&nbsp;: parent=10&amp;template=1&amp;class_key=modResource.";
 $_lang['quickstartbuttons.buttons.link.handler'] = "Gestionnaire Javascript (Javascript Handler)";
 $_lang['quickstartbuttons.buttons.link.handler_desc'] = "Comme celui pour vider le cache de MODX : MODx.clearCache();. Cela va automatiquement ajouter un «&nbsp;return false;&nbsp;» sur le lien.";
