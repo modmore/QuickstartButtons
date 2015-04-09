@@ -1,3 +1,7 @@
+++ QuickstartButtons 1.2.0-rc1
+++ Released on 2014-04-09
++++++++++++++++++++++++++
+- Update actions dropdown and buttons to link to 2.3-style actions
 - Move menu item lower in the top nav to make sure the Installer stays first
 - Conditionally load MODX 2.3 specific stylesheet (thanks Tomislav J!)
 

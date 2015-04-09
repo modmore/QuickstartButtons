@@ -2,7 +2,7 @@
 // Create window
 QuickstartButtons.window.CreateUpdateButton = function(config) {
 	config = config || {};
-    this.ident = config.ident || Ext.id();
+    config.id = this.ident = config.ident || Ext.id();
 
     Ext.applyIf(config,{
 		title: _('quickstartbuttons.buttons.create')
@@ -150,7 +150,23 @@ QuickstartButtons.window.CreateUpdateButton = function(config) {
                         ,combo: true
                         ,showNone: true
                         ,selected: config.record.action_id
+                    },
+                    namespaceTarget: config.id + '-namespace',
+                    listeners: {
+                        select: function(combo, record) {
+                            console.log(combo, record);
+                            var nsField = Ext.getCmp(combo.namespaceTarget),
+                                value = '';
+                            if (record.data.namespace && record.data.namespace.length > 0) {
+                                value = record.data.namespace;
+                            }
+                            nsField.setValue(value);
+                        }
                     }
+                },{
+                    xtype: 'hidden',
+                    name: 'action_namespace',
+                    id: config.id + '-namespace'
                 },{
                     xtype: 'textfield'
                     ,fieldLabel: _('quickstartbuttons.buttons.link.action_props')

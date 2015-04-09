@@ -81,12 +81,22 @@ class QuickstartButtonsDashboardWidget extends modDashboardWidgetInterface {
                     $btnAction = $button->get('action_id');
                     if(!empty($btnAction)) {
                         $phs['href'] = '?a='.$btnAction;
+                    }
+                    $btnActionKey = $button->get('action_key');
+                    if (!empty($btnActionKey)) {
+                        $phs['href'] = '?a=' . $btnActionKey;
 
-                        $btnActionProps = $button->get('action_props');
-                        if(!empty($btnActionProps)) {
-                            $phs['href'] .= '&'.$btnActionProps;
+                        $namespace = $button->get('namespace');
+                        if (!empty($namespace) && $namespace !== 'core') {
+                            $phs['href'] .= '&namespace=' . $namespace;
                         }
                     }
+
+                    $btnActionProps = $button->get('action_props');
+                    if(!empty($btnActionProps) && (!empty($btnAction) || !empty($btnActionKey))) {
+                        $phs['href'] .= '&'.$btnActionProps;
+                    }
+
                     $btnLink = $button->get('link');
                     if(!empty($btnLink)) { $phs['href'] = $btnLink; }
 

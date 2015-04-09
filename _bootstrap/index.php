@@ -138,6 +138,9 @@ foreach ($objectContainers as $oC) {
 $manager->alterField('qsbButton', 'icon');
 $manager->addField('qsbButton', 'icon_ms', array('after' => 'icon'));
 $manager->addField('qsbButton', 'icon_file', array('after' => 'icon_ms'));
+// 2015-04-09
+$manager->addField('qsbButton', 'action_key', array('after' => 'action_id'));
+$manager->addField('qsbButton', 'action_namespace', array('after' => 'action_key'));
 
 if (isset($_GET['loadIcons'])) {
     echo "Loading icons..\n";

@@ -25,6 +25,11 @@ switch($options[xPDOTransport::PACKAGE_ACTION]) {
         $manager->addField('qsbButton', 'icon_ms', array('after' => 'icon'));
         $manager->addField('qsbButton', 'icon_file', array('after' => 'icon_ms'));
 
+
+        // since 1.2.0, 2015-04-09
+        $manager->addField('qsbButton', 'action_key', array('after' => 'action_id'));
+        $manager->addField('qsbButton', 'action_namespace', array('after' => 'action_namespace'));
+
         // set back console logging
         $modx->setLogLevel($oldLogLevel);
 

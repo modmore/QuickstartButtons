@@ -10,8 +10,22 @@ class QuickstartButtonsUpdateProcessor extends modObjectUpdateProcessor {
         // link
 
         $action = $this->getProperty('action_id');
-        if(empty($action)) { $this->setProperty('action_id', null); }
-        else { $this->setProperty('action', $action); }
+        if(empty($action)) {
+            $this->setProperty('action_id', null);
+            $this->setProperty('action_key', null);
+            $this->setProperty('action_namespace', null);
+        }
+        else {
+            if (is_numeric($action)) {
+                $this->setProperty('action_id', $action);
+                $this->setProperty('action_key', null);
+                $this->setProperty('action_namespace', null);
+            }
+            else {
+                $this->setProperty('action_id', null);
+                $this->setProperty('action_key', $action);
+            }
+        }
 
         $handler = $this->getProperty('handler');
         if(empty($handler)) { $this->setProperty('handler', null); }
