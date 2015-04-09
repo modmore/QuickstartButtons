@@ -4,7 +4,7 @@
 $modx =& $object->xpdo;
 
 switch($options[xPDOTransport::PACKAGE_ACTION]) {
-	//case xPDOTransport::ACTION_INSTALL:
+	case xPDOTransport::ACTION_INSTALL:
 	case xPDOTransport::ACTION_UPGRADE:
 
         $modx->log(xPDO::LOG_LEVEL_INFO, 'Creating database tables...');
