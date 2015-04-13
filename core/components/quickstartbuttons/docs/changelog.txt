@@ -1,3 +1,8 @@
+++ QuickstartButtons 1.2.0-pl
+++ Released on 2014-04-13
++++++++++++++++++++++++++
+- Better design for the latest 2.3 theme (thanks Christian Seel!)
+
 ++ QuickstartButtons 1.2.0-rc1
 ++ Released on 2014-04-09
 +++++++++++++++++++++++++
