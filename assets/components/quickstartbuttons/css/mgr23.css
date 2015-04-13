@@ -6,7 +6,7 @@
     width: auto;
     overflow: hidden;
     margin: -10px;
-	background: rgba(230, 230, 230, 0.7);
+	/* background: rgba(230, 230, 230, 0.7); */
 }
 #quickstartbuttons-widget > p {
 	margin: 10px 0px 0px;
@@ -64,11 +64,12 @@
     min-height: 65px;
     width: 100%;
     position: relative;
-    padding: 5px 15px 5px 52px;
-	background-color: #fff;
+    padding: 6px 15px 4px 55px;
     border: 0 none;
 	border-radius:3px;
     box-shadow: 0 0 0 1px #e4e4e4;
+    
+    background: -webkit-gradient(linear,left top,left bottom,color-stop(0%,#ffffff),color-stop(100%,#ededed));
 
     color: #555;
 	font: bold 11px tahoma, verdana, helvetica, sans-serif;
@@ -82,14 +83,14 @@
 	-webkit-font-smoothing: antialiased;
 }
 #quickstartbuttons-widget ul li a:hover {
-    background-color: rgb(245,246,249);
-	background-color:#3697CD;
+    background: linear-gradient(#32ab9a,#00948e);
+    box-shadow: 0 0 0 1px #00948e;
 	color:#fff;
 }
 
 #quickstartbuttons-widget ul li div {
 	display: table-cell;
-	height: 64px;
+	height: 60px;
 	width: 100%;
 	vertical-align: middle;
 }
@@ -109,7 +110,7 @@
     position: absolute;
     left: 1px;
     top: 0;
-    width: 52px;
+    width: 55px;
     height: 100%;
     text-align: center;
     line-height: 70px;
