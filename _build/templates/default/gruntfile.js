@@ -4,9 +4,25 @@ module.exports = function(grunt) {
 		pkg: grunt.file.readJSON('package.json'),
 		dirs: { /* just defining some properties */
 			theme: '../../../',
+            lib: 'lib/',
 			assets: 'assets/components/quickstartbuttons/',
 			css: 'css/',
             scss: 'scss/',
+		},
+		bower: {
+			install: {
+				options: {
+					targetDir: './lib',
+					layout:'byComponent'
+				}
+			}
+		},
+		copy: { /* move files */
+			fontawesome: {
+				files:[
+					{src: ['<%= dirs.lib %>font-awesome/css/*', '<%= dirs.lib %>font-awesome/fonts/*', '!<%= dirs.lib %>font-awesome/css/*.css.map'],dest:'<%= dirs.theme %><%= dirs.assets %>fontawesome/',expand:true,flatten:true}
+				]
+			}
 		},
         sass: {
             options: {
@@ -58,11 +74,13 @@ module.exports = function(grunt) {
 
 	grunt.initConfig(initConfig);
     
+	grunt.loadNpmTasks('grunt-bower-task');
+	grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-growl');
     grunt.loadNpmTasks('grunt-sass');
     grunt.loadNpmTasks('grunt-autoprefixer');
     grunt.loadNpmTasks('grunt-contrib-watch');
     
     grunt.registerTask('default', ['growl:watch', 'watch']);
-	grunt.registerTask('build', ['sass', 'autoprefixer', 'growl:sass']);
+	grunt.registerTask('build', ['bower', 'copy', 'sass', 'autoprefixer', 'growl:sass']);
 };
