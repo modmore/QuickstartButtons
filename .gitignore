@@ -1,2 +1,6 @@
 config.core.php
 _build/build.config.php
+node_modules
+bower_components
+.sass-cache
+_build/templates/default/lib/

@@ -1,0 +1,26 @@
+{
+  "name": "QuickstartButtons",
+  "homepage": "https://github.com/modmore/QuickstartButtons",
+  "authors": [
+    "Christian Seel <chris@modmore.com>"
+  ],
+  "description": "Component for managing Quickstart buttons on your MODX manager Dashboard.",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "font-awesome": "~4.3.0"
+  },
+  "exportsOverride": {
+    "font-awesome": {
+      "css": ["css"],
+      "fonts": ["fonts"]
+    }
+  }
+}
