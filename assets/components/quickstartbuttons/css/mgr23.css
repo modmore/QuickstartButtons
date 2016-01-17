@@ -69,8 +69,8 @@
 	border-radius:3px;
     box-shadow: 0 0 0 1px #e4e4e4;
     
-    background: -webkit-gradient(linear,left top,left bottom,color-stop(0%,#ffffff),color-stop(100%,#ededed));
-
+    background: transparent linear-gradient(to bottom,#ffffff,#ededed);
+    
     color: #555;
 	font: bold 11px tahoma, verdana, helvetica, sans-serif;
 	text-decoration: none;
