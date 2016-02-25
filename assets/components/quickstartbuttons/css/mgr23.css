@@ -126,16 +126,9 @@
 /* Manager window */
 
 i.fa.fa-larger { font-size: 1.2em; }
-i.icon {
-    display: inline-block;
-    width: 16px;
-    height: 16px;
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-position: left center;
-}
 
 /* Vertical window tabs */
+
 .window-vtabs .x-panel-ml {
   padding: 0 !important;
 }
