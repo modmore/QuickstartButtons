@@ -5,6 +5,7 @@
 - Add missing media/browser action [#34]
 - Fix loading actions after save [#31]
 - Allow linking to actions with the action key and namespace [#32]
+- Fix issue displaying the set name due to caching [#23]
 
 ++ QuickstartButtons 1.2.0-pl
 ++ Released on 2014-04-13
