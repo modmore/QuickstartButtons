@@ -2,6 +2,7 @@
 - Make sure icons resolver adds new icons on update
 - Fix CSS scoping issue [#35]
 - Fix issue loading Font Awesome CSS with compress_css enabled [#20]
+- Add missing media/browser action [#34]
 
 ++ QuickstartButtons 1.2.0-pl
 ++ Released on 2014-04-13

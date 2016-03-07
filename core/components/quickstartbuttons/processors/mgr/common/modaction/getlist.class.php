@@ -33,7 +33,7 @@ class QuickstartButtonsModActonGetListProcessor extends modObjectGetListProcesso
             'element/propertyset/index', 'element/snippet', 'element/snippet/create',
             'element/snippet/update', 'element/template', 'element/template/create',
             'element/template/tvsort', 'element/template/update', 'element/tv',
-            'element/tv/create', 'element/tv/update', 'element/view', 'help',
+            'element/tv/create', 'element/tv/update', 'element/view', 'help', 'media/browser',
             'resource', 'resource/create', 'resource/data', 'resource/empty_recycle_bin',
             'resource/site_schedule', 'resource/tvs', 'resource/update', 'search', 'security',
             'security/access/policy/template/update', 'security/access/policy/update',
