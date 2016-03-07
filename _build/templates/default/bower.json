@@ -15,7 +15,7 @@
     "tests"
   ],
   "dependencies": {
-    "font-awesome": "~4.3.0"
+    "font-awesome": "~4"
   },
   "exportsOverride": {
     "font-awesome": {

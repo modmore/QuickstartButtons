@@ -20,7 +20,7 @@ module.exports = function(grunt) {
 		copy: { /* move files */
 			fontawesome: {
 				files:[
-					{src: ['<%= dirs.lib %>font-awesome/css/*', '<%= dirs.lib %>font-awesome/fonts/*', '!<%= dirs.lib %>font-awesome/css/*.css.map'],dest:'<%= dirs.theme %><%= dirs.assets %>fontawesome/',expand:true,flatten:true}
+					{src: ['<%= dirs.lib %>font-awesome/css/*','<%= dirs.lib %>font-awesome/fonts/*'],dest:'<%= dirs.theme %><%= dirs.assets %>'}
 				]
 			}
 		},
