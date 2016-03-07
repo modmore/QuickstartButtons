@@ -154,7 +154,6 @@ QuickstartButtons.window.CreateUpdateButton = function(config) {
                     namespaceTarget: config.id + '-namespace',
                     listeners: {
                         select: function(combo, record) {
-                            console.log(combo, record);
                             var nsField = Ext.getCmp(combo.namespaceTarget),
                                 value = '';
                             if (record.data.namespace && record.data.namespace.length > 0) {
