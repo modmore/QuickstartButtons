@@ -8,7 +8,7 @@ QuickstartButtons.grid.Buttons = function(config) {
 		,save_action: 'mgr/buttons/updateFromGrid'
 		,autosave: true
 
-		,fields: ['id','set','icon','icon_ms','icon_file','iconcls','iconpath','text','description','ranking','action_id','action_props','handler','link','newwindow','active']
+		,fields: ['id','set','icon','icon_ms','icon_file','iconcls','iconpath','text','description','ranking','action_id','action_key','action_props','handler','link','newwindow','active']
 		,paging: true
         ,pageSize: 6
 		,remoteSort: true
@@ -85,16 +85,19 @@ Ext.extend(QuickstartButtons.grid.Buttons, MODx.grid.Grid, {
 		return m;
 	}
     ,updateButton: function(btn, e) {
+		var record = Ext.apply({}, this.menu.record);
+		record.action_id = record.action_id || record.action_key;
+
         var w = MODx.load({
 			xtype: 'quickstartbuttons-window-button-createupdate'
-			,record: this.menu.record
+			,record: record
             ,isUpdate: true
 			,listeners: {
 				'success': { fn: this.refresh ,scope: this }
 				,'hide': { fn: function() { this.destroy(); }}
 			}
 		});
-		w.setValues(this.menu.record);
+		w.setValues(record);
         w.setTitle(_('quickstartbuttons.buttons.update') + ': ' + this.menu.record.text);
 		w.show(e.target, function() {
 			Ext.isSafari ? w.setPosition(null,30) : w.center();

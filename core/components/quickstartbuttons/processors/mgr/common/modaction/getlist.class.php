@@ -62,7 +62,7 @@ class QuickstartButtonsModActonGetListProcessor extends modObjectGetListProcesso
     public function prepareQueryBeforeCount(xPDOQuery $c) {
 
         $selected = $this->getProperty('selected');
-        if(!empty($selected)) {
+        if(!empty($selected) && is_numeric($selected)) {
             $newSort = 'FIELD(id, '.$selected.') DESC, '.$this->defaultSortField;
             $this->setProperty('sort', $newSort);
         }

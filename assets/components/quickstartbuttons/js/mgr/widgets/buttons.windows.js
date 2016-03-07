@@ -149,7 +149,7 @@ QuickstartButtons.window.CreateUpdateButton = function(config) {
                         action: 'mgr/common/modaction/getList'
                         ,combo: true
                         ,showNone: true
-                        ,selected: config.record.action_id
+                        ,selected: config.record.action_id || config.record.action_key
                     },
                     namespaceTarget: config.id + '-namespace',
                     listeners: {
