@@ -11,6 +11,7 @@ abstract class QuickstartButtonsManagerController extends modExtraManagerControl
         $this->quickstartbuttons = new QuickstartButtons($this->modx);
 
         $this->addCss($this->quickstartbuttons->config['cssUrl'].'mgr.css');
+        $this->addCss($this->quickstartbuttons->config['assetsUrl'].'lib/font-awesome/css/font-awesome.min.css');
         $this->addJavascript($this->quickstartbuttons->config['jsUrl'].'mgr/quickstartbuttons.js');
         $this->addJavascript($this->quickstartbuttons->config['jsUrl'].'mgr/combos.js');
         $this->addHtml('<script type="text/javascript">

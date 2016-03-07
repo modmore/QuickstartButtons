@@ -23,6 +23,7 @@ class QuickstartButtonsDashboardWidget extends modDashboardWidgetInterface {
         {
             $this->modx->controller->addCss($this->qsb->config['cssUrl'].'mgr23.css');
         }
+        $this->modx->controller->addCss($this->qsb->config['assetsUrl'].'lib/font-awesome/css/font-awesome.min.css');
 
         // caching
         $cacheKey = 'qsb/'.md5(implode(',', $this->modx->user->getUserGroupNames()));
