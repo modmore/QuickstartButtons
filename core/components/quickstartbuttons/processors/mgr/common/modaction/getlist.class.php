@@ -69,10 +69,12 @@ class QuickstartButtonsModActonGetListProcessor extends modObjectGetListProcesso
 
         $query = $this->getProperty('query');
         if(!empty($query)) {
+            $this->setProperty('showNone', false);
             $this->query = $query;
             $c->andCondition(array(
                 'id' => $query,
-                'OR:name:LIKE' => '%'.$query.'%',
+                'OR:namespace:LIKE' => '%'.$query.'%',
+                'OR:controller:LIKE' => '%'.$query.'%',
             ));
         }
 

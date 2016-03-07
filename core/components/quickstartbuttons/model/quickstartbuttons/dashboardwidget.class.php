@@ -87,7 +87,7 @@ class QuickstartButtonsDashboardWidget extends modDashboardWidgetInterface {
                     if (!empty($btnActionKey)) {
                         $phs['href'] = '?a=' . $btnActionKey;
 
-                        $namespace = $button->get('namespace');
+                        $namespace = $button->get('action_namespace');
                         if (!empty($namespace) && $namespace !== 'core') {
                             $phs['href'] .= '&namespace=' . $namespace;
                         }

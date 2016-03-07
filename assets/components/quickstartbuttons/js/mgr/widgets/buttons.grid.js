@@ -8,7 +8,7 @@ QuickstartButtons.grid.Buttons = function(config) {
 		,save_action: 'mgr/buttons/updateFromGrid'
 		,autosave: true
 
-		,fields: ['id','set','icon','icon_ms','icon_file','iconcls','iconpath','text','description','ranking','action_id','action_key','action_props','handler','link','newwindow','active']
+		,fields: ['id','set','icon','icon_ms','icon_file','iconcls','iconpath','text','description','ranking','action_id','action_key','action_namespace','action_props','handler','link','newwindow','active']
 		,paging: true
         ,pageSize: 6
 		,remoteSort: true

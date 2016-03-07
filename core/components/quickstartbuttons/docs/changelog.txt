@@ -4,6 +4,7 @@
 - Fix issue loading Font Awesome CSS with compress_css enabled [#20]
 - Add missing media/browser action [#34]
 - Fix loading actions after save [#31]
+- Allow linking to actions with the action key and namespace [#32]
 
 ++ QuickstartButtons 1.2.0-pl
 ++ Released on 2014-04-13
