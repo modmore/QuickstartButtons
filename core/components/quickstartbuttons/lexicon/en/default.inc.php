@@ -23,9 +23,9 @@ $_lang['quickstartbuttons.sets.buttonsperrow.three'] = "Three buttons";
 $_lang['quickstartbuttons.sets.buttonsperrow.four'] = "Four buttons";
 $_lang['quickstartbuttons.sets.buttonsperrow.five'] = "Five buttons";
 
-$_lang['quickstartbuttons.sets.update'] = "Update set";
+$_lang['quickstartbuttons.sets.update'] = "Edit set";
 $_lang['quickstartbuttons.sets.duplicate'] = "Duplicate set";
-$_lang['quickstartbuttons.sets.remove'] = "Remove set";
+$_lang['quickstartbuttons.sets.remove'] = "Delete set";
 $_lang['quickstartbuttons.sets.remove_confirm'] = "Are you sure you want to remove this set and its buttons? This is irreversible!";
 
 // buttons part
@@ -55,9 +55,9 @@ $_lang['quickstartbuttons.buttons.link.handler_desc'] = "Like the MODX clear cac
 $_lang['quickstartbuttons.buttons.link.full'] = "Full Link";
 $_lang['quickstartbuttons.buttons.link.newwindow'] = "Open in new window";
 
-$_lang['quickstartbuttons.buttons.update'] = "Update button";
-$_lang['quickstartbuttons.buttons.remove'] = "Remove button";
-$_lang['quickstartbuttons.buttons.remove_confirm'] = "Are you sure you want to remove \"[[+text]]\" from the set?";
+$_lang['quickstartbuttons.buttons.update'] = "Edit button";
+$_lang['quickstartbuttons.buttons.remove'] = "Delete button";
+$_lang['quickstartbuttons.buttons.remove_confirm'] = "Are you sure you want to delete \"[[+text]]\" from the set?";
 
 // usergroups part
 $_lang['quickstartbuttons.usergroups'] = "User Groups";
