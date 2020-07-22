@@ -29,7 +29,3 @@ abstract class QuickstartButtonsManagerController extends modExtraManagerControl
 
     public function checkPermissions() { return $this->modx->hasPermission('dashboards'); }
 }
-
-class ControllersIndexManagerController extends QuickstartButtonsManagerController {
-    public static function getDefaultController() { return 'home'; }
-}

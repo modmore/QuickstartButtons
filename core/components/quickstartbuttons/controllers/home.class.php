@@ -1,4 +1,5 @@
 <?php
+require_once __DIR__ . '/index.class.php';
 
 class QuickstartButtonsHomeManagerController extends QuickstartButtonsManagerController {
     public function process(array $scriptProperties = array()) {
@@ -22,3 +23,5 @@ class QuickstartButtonsHomeManagerController extends QuickstartButtonsManagerCon
 
     public function getTemplateFile() { return $this->quickstartbuttons->config['templatesPath'].'home.tpl'; }
 }
+
+return QuickstartButtonsHomeManagerController::class;
