@@ -8,9 +8,8 @@ class QuickstartButtonsGetListProcessor extends modObjectGetListProcessor {
 	public $objectType = 'quickstartbuttons.qsbbutton';
 
     public function prepareQueryBeforeCount(xPDOQuery $c) {
-
-        $c->select(array('qsbButton.*', 'Icon.class AS iconcls', 'Icon.path as iconpath'));
         $c->leftJoin('qsbIcon', 'Icon');
+        $c->select(array('qsbButton.*', 'Icon.class AS iconcls', 'Icon.path as iconpath'));
         $c->where(array('set' => $this->getProperty('id')));
 
         $query = $this->getProperty('query');
@@ -23,6 +22,18 @@ class QuickstartButtonsGetListProcessor extends modObjectGetListProcessor {
 
         return $c;
     }
+
+    public function prepareRow(xPDOObject $object)
+    {
+        $arr = $object->toArray('', false, true, true);
+        if(!empty($arr['iconpath'])) {
+            $path = $arr['iconpath'];
+            $this->modx->parser->processElementTags('', $path, true, true);
+            $arr['iconpath'] = $path;
+        }
+        return $arr;
+    }
+
 }
 
 return 'QuickstartButtonsGetListProcessor';

@@ -121,12 +121,11 @@ Ext.extend(QuickstartButtons.grid.Buttons, MODx.grid.Grid, {
     /** SOME RENDERS **/
 	,renderTextField: function(v,md,rec,ri,ci,s,g) {
         var r = s.getAt(ri).data;
-
         if(!Ext.isEmpty(r.iconpath)) {
-            return '<i class="icon" style="background-image: url(' + r.iconpath + ')"></i> ' + v;
+            return '<i class="icon fa-fw qsb-custom-icon" style="background-image: url(' + r.iconpath + ')"></i> ' + Ext.util.Format.htmlEncode(v);
         }
 
-        return '<i class="fa fa-larger ' + r.iconcls + '"></i> ' + Ext.util.Format.htmlEncode(v);
+        return '<i class="fa fa-fw fa-larger ' + r.iconcls + '"></i> ' + Ext.util.Format.htmlEncode(v);
     }
 	,renderYNfield: function(v,md,rec,ri,ci,s,g) {
         var r = s.getAt(ri).data;

@@ -48,9 +48,9 @@ QuickstartButtons.combo.Icons = function(config) {
             ,selected: config.selected
         }
         ,tpl: new Ext.XTemplate('<tpl for="."><div class="x-combo-list-item">'
-            ,'<tpl if="Ext.isEmpty(path)"><i class="fa {class}"></i> </tpl>'
-            ,'<tpl if="!Ext.isEmpty(path)"><i class="icon {class}" style="background-image:url({path});"></i> </tpl>'
-            ,'{name}</div></tpl>')
+            ,'<tpl if="Ext.isEmpty(path)"><i class="fa {class:htmlEncode} fa-fw"></i> </tpl>'
+            ,'<tpl if="!Ext.isEmpty(path)"><i class="icon {class:htmlEncode} fa-fw qsb-custom-icon" style="background-image:url({path});"></i> </tpl>'
+            ,'{name:htmlEncode}</div></tpl>')
     });
 
     QuickstartButtons.combo.Icons.superclass.constructor.call(this, config);

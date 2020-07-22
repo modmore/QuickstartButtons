@@ -2,6 +2,7 @@
 - Replace modAction based routing with namespace routing [#52]
 - Prevent persisted XSS in component grids
 - Fix selected action not being saved on first create of a button [#41]
+- Fix custom icons not showing
 
 ++ QuickstartButtons 1.3.0-rc1
 ++ Released on 2016-03-07

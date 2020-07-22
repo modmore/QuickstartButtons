@@ -167,3 +167,11 @@ i.fa.fa-larger {
 .window-vtabs.x-window-body {
   padding: 0;
 }
+
+.qsb-custom-icon {
+  height: 1em;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  vertical-align: middle;
+}

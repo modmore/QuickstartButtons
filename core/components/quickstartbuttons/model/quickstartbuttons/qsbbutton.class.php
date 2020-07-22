@@ -13,19 +13,21 @@ class qsbButton extends xPDOSimpleObject {
     public function toArray($keyPrefix='', $rawValues=false, $excludeLazy=false, $includeRelated=false) {
         $arr = parent::toArray($keyPrefix, $rawValues, $excludeLazy, $includeRelated);
 
-        // figure out the icon
-        $icon = $this->getIcon();
-        if(!empty($icon) && is_array($icon)) {
-            switch($icon['type']) {
-                case 'custom':
-                    $arr['iconcls'] = '';
-                    $arr['iconpath'] = $icon['value'];
-                break;
-                case 'preset':
-                default:
-                    $arr['iconcls'] = $icon['value'];
-                    $arr['iconpath'] = '';
-                break;
+        // figure out the icon if not already set
+        if (empty($arr['iconcls']) && empty($arr['iconpath'])) {
+            $icon = $this->getIcon();
+            if (!empty($icon) && is_array($icon)) {
+                switch ($icon['type']) {
+                    case 'custom':
+                        $arr['iconcls'] = '';
+                        $arr['iconpath'] = $icon['value'];
+                        break;
+                    case 'preset':
+                    default:
+                        $arr['iconcls'] = $icon['value'];
+                        $arr['iconpath'] = '';
+                        break;
+                }
             }
         }
 
