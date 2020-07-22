@@ -110,7 +110,7 @@ Ext.extend(QuickstartButtons.grid.Sets, MODx.grid.Grid, {
 			}
 		});
 		w.setValues(this.menu.record);
-        w.setTitle(_('quickstartbuttons.sets.update') + ': ' + this.menu.record.name);
+        w.setTitle(_('quickstartbuttons.sets.update') + ': ' + Ext.util.Format.htmlEncode(this.menu.record.name));
 		w.show(e.target, function() {
 			Ext.isSafari ? w.setPosition(null,30) : w.center();
 		}, this);
