@@ -23,10 +23,10 @@ $_lang['quickstartbuttons.sets.buttonsperrow.three'] = "Three buttons";
 $_lang['quickstartbuttons.sets.buttonsperrow.four'] = "Four buttons";
 $_lang['quickstartbuttons.sets.buttonsperrow.five'] = "Five buttons";
 
-$_lang['quickstartbuttons.sets.update'] = "Update set";
+$_lang['quickstartbuttons.sets.update'] = "Edit set";
 $_lang['quickstartbuttons.sets.duplicate'] = "Duplicate set";
-$_lang['quickstartbuttons.sets.remove'] = "Remove set";
-$_lang['quickstartbuttons.sets.remove_confirm'] = "Are you sure you want to remove this set and it's buttons? This is irreversible!";
+$_lang['quickstartbuttons.sets.remove'] = "Delete set";
+$_lang['quickstartbuttons.sets.remove_confirm'] = "Are you sure you want to remove this set and its buttons? This is irreversible!";
 
 // buttons part
 $_lang['quickstartbuttons.buttons'] = "Buttons";
@@ -45,7 +45,7 @@ $_lang['quickstartbuttons.buttons.icon.ms'] = "The Media Source to search icons 
 $_lang['quickstartbuttons.buttons.icon.select'] = "Select an icon from Media Source";
 
 $_lang['quickstartbuttons.buttons.link'] = "Link";
-$_lang['quickstartbuttons.buttons.link_desc'] = "Below you can configure the action for the button. The priority of the link to use is from top down. This means that if you set the first, the second and third will be ignored and if you leave the first empty, set the second, the third one will be ignored etc.";
+$_lang['quickstartbuttons.buttons.link_desc'] = "Below you can configure the action for the button. The priority of the link to use is from top down. This means that if you set the first, the second and third will be ignored, and if you leave the first empty, set the second, the third one will be ignored etc.";
 $_lang['quickstartbuttons.buttons.link.action'] = "Systems Action";
 $_lang['quickstartbuttons.buttons.link.namespace'] = "Namespace";
 $_lang['quickstartbuttons.buttons.link.action_props'] = "Systems Action additional properties";
@@ -55,9 +55,9 @@ $_lang['quickstartbuttons.buttons.link.handler_desc'] = "Like the MODX clear cac
 $_lang['quickstartbuttons.buttons.link.full'] = "Full Link";
 $_lang['quickstartbuttons.buttons.link.newwindow'] = "Open in new window";
 
-$_lang['quickstartbuttons.buttons.update'] = "Update button";
-$_lang['quickstartbuttons.buttons.remove'] = "Remove button";
-$_lang['quickstartbuttons.buttons.remove_confirm'] = "Are you sure you want to remove \"[[+text]]\" from the set?";
+$_lang['quickstartbuttons.buttons.update'] = "Edit button";
+$_lang['quickstartbuttons.buttons.remove'] = "Delete button";
+$_lang['quickstartbuttons.buttons.remove_confirm'] = "Are you sure you want to delete \"[[+text]]\" from the set?";
 
 // usergroups part
 $_lang['quickstartbuttons.usergroups'] = "User Groups";
