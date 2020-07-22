@@ -15,6 +15,7 @@ QuickstartButtons.grid.UserGroups = function(config) {
 			header: _('quickstartbuttons.usergroups.name')
 			,dataIndex: 'name'
 			,sortable: true
+			,renderer: Ext.util.Format.htmlEncode
 		}]
         ,tbar: [{
             text: _('quickstartbuttons.usergroups.add')

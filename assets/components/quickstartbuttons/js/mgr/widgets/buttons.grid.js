@@ -25,6 +25,7 @@ QuickstartButtons.grid.Buttons = function(config) {
 			,dataIndex: 'description'
 			,sortable: true
 			,editor: { xtype: 'textfield' ,allowBlank: false }
+			,renderer: Ext.util.Format.htmlEncode
 		},{
 			header: _('quickstartbuttons.buttons.ranking')
 			,dataIndex: 'ranking'
@@ -125,7 +126,7 @@ Ext.extend(QuickstartButtons.grid.Buttons, MODx.grid.Grid, {
             return '<i class="icon" style="background-image: url(' + r.iconpath + ')"></i> ' + v;
         }
 
-        return '<i class="fa fa-larger ' + r.iconcls + '"></i> ' + v;
+        return '<i class="fa fa-larger ' + r.iconcls + '"></i> ' + Ext.util.Format.htmlEncode(v);
     }
 	,renderYNfield: function(v,md,rec,ri,ci,s,g) {
         var r = s.getAt(ri).data;

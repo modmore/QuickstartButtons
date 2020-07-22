@@ -18,11 +18,13 @@ QuickstartButtons.grid.Sets = function(config) {
 			,dataIndex: 'name'
 			,sortable: true
 			,editor: { xtype: 'textfield' ,allowBlank: false ,maxLength: 255 }
+			,renderer: Ext.util.Format.htmlEncode
 		},{
 			header: _('quickstartbuttons.sets.description')
 			,dataIndex: 'description'
 			,sortable: true
             ,editor: { xtype: 'textfield' ,allowBlank: true }
+			,renderer: Ext.util.Format.htmlEncode
 		},{
 			header: _('quickstartbuttons.sets.btnscount')
 			,dataIndex: 'btnscount'
@@ -153,7 +155,7 @@ Ext.extend(QuickstartButtons.grid.Sets, MODx.grid.Grid, {
         if(Ext.isEmpty(v)) {
             return '<i>-- ' + _('quickstartbuttons.none') + ' --</i>';
         }
-		return v;
+		return Ext.util.Format.htmlEncode(v);
 	}
 });
 Ext.reg('quickstartbuttons-grid-sets', QuickstartButtons.grid.Sets);
