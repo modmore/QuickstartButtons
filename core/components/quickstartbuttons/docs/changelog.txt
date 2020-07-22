@@ -1,3 +1,6 @@
+++ QuickstartButtons 1.3.0-pl
+++ Released on 2020-07-22
++++++++++++++++++++++++++
 - Fix installation on InnoDB due to indexes that were too long, and set defaultEngine to InnoDB [#43]
 - Replace modAction based routing with namespace routing [#52]
 - Prevent persisted XSS in component grids
