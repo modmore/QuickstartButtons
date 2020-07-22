@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<model package="quickstartbuttons" baseClass="xPDOObject" platform="mysql" defaultEngine="MyISAM" version="1.0">
+<model package="quickstartbuttons" baseClass="xPDOObject" platform="mysql" defaultEngine="InnoDB" version="1.0">
 	
 	<object class="qsbSetUserGroup" table="quickstartbuttons_sets_usergroups" extends="xPDOObject">
         <field key="usergroup" dbtype="int" precision="11" phptype="integer" null="false" default="0" index="pk" />
@@ -15,7 +15,7 @@
     </object>
 
     <object class="qsbSet" table="quickstartbuttons_sets" extends="xPDOSimpleObject">
-		<field key="name" dbtype="varchar" precision="255" phptype="string" null="false" index="index" />
+		<field key="name" dbtype="varchar" precision="191" phptype="string" null="false" index="index" />
         <field key="description" dbtype="text" phptype="string" null="false" default="" />
         <field key="size" dbtype="varchar" precision="25" phptype="string" null="false" default="full" />
         <field key="perrow" dbtype="varchar" precision="25" phptype="string" null="false" default="four" />
@@ -30,7 +30,7 @@
         <field key="icon" dbtype="int" precision="11" phptype="integer" null="true" default="NULL" index="index" />
         <field key="icon_ms" dbtype="int" precision="11" phptype="integer" null="true" default="NULL" index="index" />
         <field key="icon_file" dbtype="varchar" precision="255" phptype="string" null="true" default="NULL" />
-        <field key="text" dbtype="varchar" precision="255" phptype="string" null="false" index="index" />
+        <field key="text" dbtype="varchar" precision="191" phptype="string" null="false" index="index" />
         <field key="description" dbtype="text" phptype="string" null="false" default="" />
 
         <field key="action_id" dbtype="int" precision="11" phptype="integer" null="true" default="NULL" />

@@ -4,6 +4,10 @@ $xpdo_meta_map['qsbSetUserGroup']= array (
   'version' => '1.0',
   'table' => 'quickstartbuttons_sets_usergroups',
   'extends' => 'xPDOObject',
+  'tableMeta' => 
+  array (
+    'engine' => 'InnoDB',
+  ),
   'fields' => 
   array (
     'usergroup' => 0,

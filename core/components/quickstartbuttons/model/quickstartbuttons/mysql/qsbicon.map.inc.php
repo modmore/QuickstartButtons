@@ -4,6 +4,10 @@ $xpdo_meta_map['qsbIcon']= array (
   'version' => '1.0',
   'table' => 'quickstartbuttons_icons',
   'extends' => 'xPDOSimpleObject',
+  'tableMeta' => 
+  array (
+    'engine' => 'InnoDB',
+  ),
   'fields' => 
   array (
     'name' => '',

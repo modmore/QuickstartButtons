@@ -4,6 +4,10 @@ $xpdo_meta_map['qsbButton']= array (
   'version' => '1.0',
   'table' => 'quickstartbuttons_buttons',
   'extends' => 'xPDOSimpleObject',
+  'tableMeta' => 
+  array (
+    'engine' => 'InnoDB',
+  ),
   'fields' => 
   array (
     'set' => NULL,
@@ -61,7 +65,7 @@ $xpdo_meta_map['qsbButton']= array (
     'text' => 
     array (
       'dbtype' => 'varchar',
-      'precision' => '255',
+      'precision' => '191',
       'phptype' => 'string',
       'null' => false,
       'index' => 'index',
