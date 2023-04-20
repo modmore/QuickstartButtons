@@ -4,7 +4,7 @@ QuickstartButtons.grid.Sets = function(config) {
     Ext.applyIf(config, {
         id: 'quickstartbuttons-grid-sets'
 		,url: QuickstartButtons.config.connector_url
-		,baseParams: { action: 'mgr/sets/getList' }
+		,baseParams: { action: 'mgr/sets/getlist' }
 		,save_action: 'mgr/sets/updateFromGrid'
 		,autosave: true
 		
