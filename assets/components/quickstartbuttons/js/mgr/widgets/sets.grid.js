@@ -5,7 +5,7 @@ QuickstartButtons.grid.Sets = function(config) {
         id: 'quickstartbuttons-grid-sets'
 		,url: QuickstartButtons.config.connector_url
 		,baseParams: { action: 'mgr/sets/getlist' }
-		,save_action: 'mgr/sets/updateFromGrid'
+		,save_action: 'mgr/sets/updatefromgrid'
 		,autosave: true
 		
 		,fields: ['id','name','description','size','perrow','btnscount','usergroups','active']
