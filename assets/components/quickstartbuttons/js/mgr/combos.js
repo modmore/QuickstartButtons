@@ -14,7 +14,7 @@ QuickstartButtons.combo.UserGroups = function(config) {
 		,autocomplete: true
 		,url: QuickstartButtons.config.connector_url
 		,baseParams: {
-            action: 'mgr/common/modusergroup/getList'
+            action: 'mgr/common/modusergroup/getlist'
 			,combo: true
         }
     });

@@ -4,7 +4,7 @@ QuickstartButtons.grid.UserGroups = function(config) {
     Ext.applyIf(config, {
         id: 'quickstartbuttons-grid-usergroups'
 		,url: QuickstartButtons.config.connector_url
-		,baseParams: { action: 'mgr/usergroups/getList' ,id: config.setId }
+		,baseParams: { action: 'mgr/usergroups/getlist' ,id: config.setId }
 		,fields: ['usergroup','set','name']
 		,paging: true
         ,pageSize: 6
