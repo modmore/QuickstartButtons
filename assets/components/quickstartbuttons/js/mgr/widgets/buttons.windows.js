@@ -139,7 +139,7 @@ QuickstartButtons.window.CreateUpdateButton = function(config) {
                     html: '<p>' + _('quickstartbuttons.buttons.link_desc') + '</p><br/>'
                     ,border: false
                 },{
-                    xtype: 'modx-combo-action'
+                    xtype: 'modx-combo'
                     ,fieldLabel: _('quickstartbuttons.buttons.link.action')
                     ,name: 'action_id'
                     ,hiddenName: 'action_id'
@@ -149,9 +149,12 @@ QuickstartButtons.window.CreateUpdateButton = function(config) {
                     ,minChars: 1
                     ,forceSelection: false
                     ,anchor: '100%'
+                    ,displayField: 'controller'
+                    ,valueField: 'id'
+                    ,fields: ['id', 'controller', 'namespace']
                     ,url: QuickstartButtons.config.connector_url
                     ,baseParams: {
-                        action: 'mgr/common/modaction/getList'
+                        action: 'mgr/common/modaction/getlist'
                         ,combo: true
                         ,showNone: true
                         ,selected: config.record.action_id || config.record.action_key
