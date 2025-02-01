@@ -1,3 +1,11 @@
+++ QuickstartButtons 1.4.0-pl
+++ Released on 2025-02-01
++++++++++++++++++++++++++
+- Basic MODX 3 compatibility
+- Switch xtype modx-combo-actions to generic modx-combo and customise params [ae58f8d]
+- Remove modAction from bootstrap script [528c3fa]
+- Convert processor calls to lower case (@sebastian-marinescu) [#55]
+
 ++ QuickstartButtons 1.3.0-pl
 ++ Released on 2020-07-22
 +++++++++++++++++++++++++
